@@ -1,0 +1,74 @@
+[
+  {
+    "_id": 1,
+    "name": "Abdul",
+    "price": "90",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://img.freepik.com/premium-photo/smiling-technician-working-broken-computer_13339-278445.jpg"
+  },
+  {
+    "_id": 2,
+    "name": "Sattar",
+    "price": "99",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://img.freepik.com/free-photo/young-male-technician-wearing-gloves-fixing-computer-motherboard-with-screwdriver_23-2147922176.jpg"
+  },
+  {
+    "_id": 3,
+    "name": "Maria",
+    "price": "89",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://previews.123rf.com/images/ljupco/ljupco1604/ljupco160400270/56183460-cheerful-female-it-technician-holding-a-computer-part-and-a-screwdriver-isolated-on-white-background.jpg"
+  },
+  {
+    "_id": 4,
+    "name": "Faria",
+    "price": "78",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://www.insureon.com/-/media/blog/posts/2019/photo_woman-fixing-computer.jpg?h=375&iar=0&w=750&rev=23f11902252843bcbb9b509ef57e942c"
+  },
+  {
+    "_id": 5,
+    "name": "Josaf",
+    "price": "67",
+    "description": "A good worker",
+    "location": "Barishal",
+    "img": "https://qfix.com.bd/wp-content/uploads/2022/03/437345-PEBLQ6-57.jpg"
+  },
+  {
+    "_id": 6,
+    "name": "Karim",
+    "price": "50",
+    "description": "A good worker",
+    "location": "Khulna",
+    "img": "https://media.istockphoto.com/id/1347879841/photo/shot-of-a-young-man-using-a-laptop-while-working-in-a-server-room.jpg?b=1&s=170667a&w=0&k=20&c=YkMrXkBzpgYGlCu1WlZn8t9yEWh7ztalNa78aLpn-d4="
+  },
+  {
+    "_id": 7,
+    "name": "Sattar",
+    "price": "76",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://www.onlinedegree.com/wp-content/uploads/2016/11/computer_repair_technician-700x467.jpg"
+  },
+  {
+    "_id": 8,
+    "name": "Kalam",
+    "price": "82",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://www.insureon.com/-/media/blog/posts/2020/photo_technician-repairing-computer.jpg?h=370&iar=0&w=750&rev=256c85894eb9484791c011b975eb847f"
+  },
+  {
+    "_id": 9,
+    "name": "Kaluka",
+    "price": "96",
+    "description": "A good worker",
+    "location": "Dhaka",
+    "img": "https://t3.ftcdn.net/jpg/04/61/48/90/360_F_461489085_gvKVCQhyl30MHDi5X1jkRW0e1XV840rd.jpg"
+  }
+]
