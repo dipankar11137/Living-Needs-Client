@@ -2,8 +2,7 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../../firebase.init";
-import logo from "../../Images/Logo/job icon.png";
+import auth from '../../../firebase.init';
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -11,8 +10,8 @@ const Navbar = () => {
 
   const logout = () => {
     signOut(auth);
-    localStorage.removeItem("accessToken");
-    navigator("/");
+    localStorage.removeItem('accessToken');
+    navigator('/');
   };
 
   const manuItem = (
@@ -21,9 +20,9 @@ const Navbar = () => {
         <Link to="/about">About</Link>
       </li>
       <li className="font-bold">
-        <Link to="/blogs">Blogs</Link>
+        <Link to="/blogs">Needs Job</Link>
       </li>
-      {user?.email === "abc@def.com" && (
+      {user?.email === 'abc@def.com' && (
         <li className="font-bold">
           <Link to="/dashboard">Dashboard</Link>
         </li>
