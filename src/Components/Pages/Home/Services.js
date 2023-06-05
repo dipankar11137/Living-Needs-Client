@@ -17,11 +17,11 @@ const Services = () => {
                   className="w-full pic-style"
                   src="https://img.freepik.com/premium-vector/computer-technician-profession-mascot-logo-vector-cartoon-style_180868-1139.jpg?w=2000"
                   alt="Shoes"
-                  style={{ height: "200px", width: "200px" }}
+                  style={{ height: '200px', width: '200px' }}
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title font-bold">Computer Technician</h2>
+                <h2 className="card-title font-bold">কম্পিউটার কারিগর</h2>
               </div>
             </div>
           </Link>
@@ -33,11 +33,11 @@ const Services = () => {
                   className="w-full pic-style"
                   src="https://thumbs.dreamstime.com/b/mechanic-man-logo-holding-huge-wrench-mechanic-man-logo-holding-huge-wrench-service-repair-maintenance-mascot-concept-160467303.jpg"
                   alt="Shoes"
-                  style={{ height: "200px", width: "200px" }}
+                  style={{ height: '200px', width: '200px' }}
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title font-bold">Mechanical </h2>
+                <h2 className="card-title font-bold">যন্ত্র প্রকৌশল </h2>
               </div>
             </div>
           </Link>
@@ -49,11 +49,11 @@ const Services = () => {
                   className="w-full pic-style"
                   src="https://images-platform.99static.com/A_KEsPQVtPV0i00vJKujV7Fbmo8=/124x99:1084x1059/500x500/top/smart/99designs-contests-attachments/103/103694/attachment_103694000"
                   alt="Shoes"
-                  style={{ height: "200px", width: "200px" }}
+                  style={{ height: '200px', width: '200px' }}
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title font-bold">Electrician </h2>
+                <h2 className="card-title font-bold">ইলেকট্রিশিয়ান </h2>
               </div>
             </div>
           </Link>
@@ -65,11 +65,11 @@ const Services = () => {
                   className="w-full pic-style"
                   src="https://img.freepik.com/free-vector/cleaning-logo-business-composition_1284-35644.jpg?w=2000"
                   alt="Shoes"
-                  style={{ height: "200px", width: "200px" }}
+                  style={{ height: '200px', width: '200px' }}
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title font-bold">Cleaner</h2>
+                <h2 className="card-title font-bold">পরিষ্কারক</h2>
               </div>
             </div>
           </Link>
@@ -81,11 +81,11 @@ const Services = () => {
                   className="w-full pic-style"
                   src="https://www.freepnglogos.com/uploads/ambulance-png/ambulance-interests-the-school-counselor-kind-8.png"
                   alt="Shoes"
-                  style={{ height: "200px", width: "200px" }}
+                  style={{ height: '200px', width: '200px' }}
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title font-bold">Ambulance Services </h2>
+                <h2 className="card-title font-bold">অ্যাম্বুলেন্স পরিষেবা </h2>
               </div>
             </div>
           </Link>
@@ -97,11 +97,11 @@ const Services = () => {
                   className="w-full pic-style"
                   src="https://vehicledetail.info/CarSource/hero-imag.png"
                   alt="Shoes"
-                  style={{ height: "200px", width: "200px" }}
+                  style={{ height: '200px', width: '200px' }}
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title font-bold">Vehicles Services </h2>
+                <h2 className="card-title font-bold">যানবাহন পরিষেবা </h2>
               </div>
             </div>
           </Link>
