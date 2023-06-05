@@ -28,13 +28,6 @@ const Navbar = () => {
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
-      {user?.email === "abc@def.com" ? (
-        <></>
-      ) : (
-        <li className="font-bold">
-          <Link to="/addAReview">My Review</Link>
-        </li>
-      )}
       <li className="font-bold">
         <Link to="/contact">Contact</Link>
       </li>

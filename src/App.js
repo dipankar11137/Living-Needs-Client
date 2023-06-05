@@ -30,6 +30,7 @@ import AmbulanceServices from "./Components/Pages/Home/OurServices/AmbulanceServ
 import VehiclesServices from "./Components/Pages/Home/OurServices/VehiclesServices";
 import BookServices from "./Components/Pages/BookServices/BookServices";
 import AddJobs from "./Components/Pages/Dashboard/AddJobs";
+import Blog from "./Components/Pages/Blogs/Blog";
 
 Aos.init();
 
@@ -42,13 +43,20 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <RequireAuth>
+              <Home />
+            </RequireAuth>
+          }
+        />
 
         <Route
           path="/blogs"
           element={
             <RequireAuth>
-              <Blogs />
+              <Blog />
             </RequireAuth>
           }
         />

@@ -14,7 +14,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ShareIcon from "@material-ui/icons/Share";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CommentIcon from "@mui/icons-material/Comment";
 // modal
@@ -70,7 +72,7 @@ const style = {
   p: 4,
 };
 
-const Blogs = () => {
+const Blogs = ({ job }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const navigate = useNavigate();
@@ -80,7 +82,7 @@ const Blogs = () => {
   const handleClose = () => setOpen(false);
   // love
   const handleLoveCount = (id) => {
-    console.log(id);
+    // console.log(id);
     toast.success("Successful Like This");
   };
   //   comment
@@ -89,7 +91,7 @@ const Blogs = () => {
     setExpanded(!expanded);
   };
   const { register, handleSubmit } = useForm();
-  const handleComment = (data) => {
+  const handleCommentJob = (data) => {
     console.log(data);
     toast.success(" Successfully Add Your Comment");
     setOpen(false);
@@ -99,7 +101,7 @@ const Blogs = () => {
     navigate(`/booking/${id}`);
   };
   const shareUrl =
-    "https://www.booking.com/hotel/bd/best-western-heritage.en-gb.html?aid=1610687&label=coxs-bazar-6fj2tMEqobmP1SKHh4sjPwS379589678547%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-297601666555%3Akwd-308486685033%3Alp9069450%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YfpWGnRw6lOGgfEoJVv7zYo&sid=06a91f3de801dcff9aff29487ad562f9";
+    "https://jobs.bdjobs.com/jobdetails.asp?id=1131367&fcatId=8&ln=1";
   return (
     <div className="px-40">
       <div className=" p-2 mt-3 bg-green-100 rounded-3xl shadow-2xl hover:shadow-inner hover:bg-lime-100 border-red-700">
@@ -107,30 +109,36 @@ const Blogs = () => {
           <div className="h-28">
             <img
               className="h-40 rounded-3xl w-72 "
-              src="https://www.bdjobscareers.com/wp-content/uploads/2021/04/Square-Group-Jobs-Circular-News.png"
+              src={job?.companyLogo}
               alt=""
             />
           </div>
           <div>
-            <h1 className="text-3xl font-bold pb-2 text-blue-700">Square</h1>
+            <h1 className="text-2xl font-bold text-blue-700">{job?.jobName}</h1>
 
-            <h2 className="text-xl">Dhaka</h2>
-            <h2 className="text-xl">Education</h2>
-            <h2 className="text-xl">Experience</h2>
+            <h2 className="text-xl pb-2 font-semibold">{job?.companyName}</h2>
+            <h2 className="text-xl ">
+              <LocationOnIcon className="mr-3" />
+              {job?.location}
+            </h2>
+            <h2 className="text-xl">
+              <ManageAccountsIcon className="mr-3" />
+              {job?.experience} Years
+            </h2>
           </div>
         </div>
         {/* modal */}
         <div>
           <CardActions disableSpacing>
             <div className="flex justify-end w-full">
-              <button
+              {/* <button
                 onClick={() => handleLoveCount()}
                 className="text-red-600 "
               >
                 <FavoriteIcon />
-              </button>
-
-              <div>
+              </button> */}
+              {/* Comment */}
+              {/* <div>
                 <Button onClick={handleOpen}>
                   <CommentIcon />
                 </Button>
@@ -142,35 +150,10 @@ const Blogs = () => {
                   aria-describedby="keep-mounted-modal-description"
                 >
                   <Box className="rounded-xl" sx={style}>
-                    <form onSubmit={handleSubmit(handleComment)}>
-                      <p>Please Write</p>
-                      <textarea
-                        placeholder="Input Your Comment"
-                        className="bg-indigo-200 rounded-lg p-3 pr-4"
-                        {...register("comment")}
-                      ></textarea>
-
-                      <input
-                        className="hidden"
-                        // value={hotel?.name}
-                        type="text"
-                        {...register("name", { required: true })}
-                      />
-                      <input
-                        className="hidden"
-                        // value={hotel?._id}
-                        type="text"
-                        {...register("_id")}
-                      />
-
-                      <input
-                        className="bg-indigo-600 p-2  rounded-lg cursor-pointer font-bold uppercase text-white ml-4 -pt-3"
-                        type="submit"
-                      />
-                    </form>
+                    <h1>hello</h1>
                   </Box>
                 </Modal>
-              </div>
+              </div> */}
               {/* shere */}
               <button>
                 <FacebookShareButton url={shareUrl}>
@@ -194,34 +177,47 @@ const Blogs = () => {
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph>Details :</Typography>
               <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron
-                and set aside for 10 minutes.
+                <span className="font-semibold text-2xl">Vacancy :</span>
               </Typography>
               <Typography paragraph>
-                Heat oil in a (14- to 16-inch) paella pan or a large, deep
-                skillet over medium-high heat. Add chicken, shrimp and chorizo,
-                and cook, stirring occasionally until lightly browned, 6 to 8
-                minutes. Transfer shrimp to a large plate and set aside, leaving
-                chicken and chorizo in the pan. Add pimentón, bay leaves,
-                garlic, tomatoes, onion, salt and pepper, and cook, stirring
-                often until thickened and fragrant, about 10 minutes. Add
-                saffron broth and remaining 4 1/2 cups chicken broth; bring to a
-                boil.
+                <span className="font-bold text-xl"> {job?.vacancy}</span>
               </Typography>
               <Typography paragraph>
-                Add rice and stir very gently to distribute. Top with artichokes
-                and peppers, and cook without stirring, until most of the liquid
-                is absorbed, 15 to 18 minutes. Reduce heat to medium-low, add
-                reserved shrimp and mussels, tucking them down into the rice,
-                and cook again without stirring, until mussels have opened and
-                rice is just tender, 5 to 7 minutes more. (Discard any mussels
-                that don’t open.)
+                <span className="font-semibold text-2xl">
+                  Job Responsibilities :
+                </span>
               </Typography>
-              {/* <Typography>{hotel?.description}</Typography> */}
+              <Typography paragraph>{job?.jobResponsibilities}</Typography>
+              <Typography paragraph>
+                <span className="font-semibold text-2xl">
+                  Employment Status :
+                </span>
+              </Typography>
+              <Typography paragraph>{job?.employeeStatus}</Typography>
+              <Typography paragraph>
+                <span className="font-semibold text-2xl">
+                  Educational Requirements :
+                </span>
+              </Typography>
+              <Typography paragraph>{job?.educationalRequirements}</Typography>
+              <Typography paragraph>
+                <span className="font-semibold text-2xl">
+                  Additional Requirements :
+                </span>
+              </Typography>
+              <Typography paragraph>{job?.additionalRequirements}</Typography>
+
               <div>
-                <h1>Comment</h1>
+                <h1 className="text-center text-lg mt-16 font-semibold">
+                  Please read before apply . Send your cv "{job?.email}".
+                  Subject : "{job?.jobName}"
+                </h1>
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-center">
+                  Application Deadline : {job?.date}
+                </h1>
               </div>
             </CardContent>
           </Collapse>

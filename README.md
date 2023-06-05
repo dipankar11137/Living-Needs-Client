@@ -1,3 +1,1 @@
-## Live Site Link : https://city-crown-electronics.firebaseapp.com/
-
-## Server Site Link : http://localhost:5000/
+## This is daily needs projects

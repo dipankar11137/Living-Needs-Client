@@ -134,19 +134,12 @@ const Login = () => {
             </form>
             <p>
               <small>
-                New to CityCrown Electronics ?{" "}
+                New to Man Power Services ?{" "}
                 <Link to="/signup" className="text-orange-600">
                   Create New Account
                 </Link>
               </small>
             </p>
-            <div className="divider">OR</div>
-            <button
-              onClick={() => signInWithGoogle()}
-              className="btn btn-orange-500 font-black"
-            >
-              Continue With Google
-            </button>
           </div>
         </div>
       </div>

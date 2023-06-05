@@ -27,7 +27,7 @@ const AddItem = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        toast.success("Successfully Add This Products");
+        toast.success("Successfully Add This ");
         reset();
       });
   };
