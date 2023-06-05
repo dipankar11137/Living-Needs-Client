@@ -1,58 +1,47 @@
-import React from "react";
-import Footer from "../Share/Footer";
-import BeachAccessIcon from "@material-ui/icons/BeachAccess";
-import SportsRugbyIcon from "@material-ui/icons/SportsRugby";
+import React from 'react';
 
 //
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
-import ShareIcon from "@material-ui/icons/Share";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import CommentIcon from "@mui/icons-material/Comment";
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import { red } from '@material-ui/core/colors';
+import { makeStyles } from '@material-ui/core/styles';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import clsx from 'clsx';
 // modal
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
-import { Popover, TextareaAutosize } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 // shere
+import { useNavigate } from 'react-router-dom';
 import {
-  FacebookShareButton,
   FacebookIcon,
-  WhatsappShareButton,
+  FacebookShareButton,
   WhatsappIcon,
-} from "react-share";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+  WhatsappShareButton,
+} from 'react-share';
+import { toast } from 'react-toastify';
+import CvDrop from './CvDrop';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 345,
   },
   media: {
     height: 0,
-    paddingTop: "56.25%", // 16:9
+    paddingTop: '56.25%', // 16:9
   },
   expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
   expandOpen: {
-    transform: "rotate(180deg)",
+    transform: 'rotate(180deg)',
   },
   avatar: {
     backgroundColor: red[500],
@@ -61,13 +50,13 @@ const useStyles = makeStyles((theme) => ({
 
 // modal
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
@@ -81,9 +70,9 @@ const Blogs = ({ job }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   // love
-  const handleLoveCount = (id) => {
+  const handleLoveCount = id => {
     // console.log(id);
-    toast.success("Successful Like This");
+    toast.success('Successful Like This');
   };
   //   comment
 
@@ -91,17 +80,17 @@ const Blogs = ({ job }) => {
     setExpanded(!expanded);
   };
   const { register, handleSubmit } = useForm();
-  const handleCommentJob = (data) => {
+  const handleCommentJob = data => {
     console.log(data);
-    toast.success(" Successfully Add Your Comment");
+    toast.success(' Successfully Add Your Comment');
     setOpen(false);
   };
   // Book
-  const handleBook = (id) => {
+  const handleBook = id => {
     navigate(`/booking/${id}`);
   };
   const shareUrl =
-    "https://jobs.bdjobs.com/jobdetails.asp?id=1131367&fcatId=8&ln=1";
+    'https://jobs.bdjobs.com/jobdetails.asp?id=1131367&fcatId=8&ln=1';
   return (
     <div className="px-40">
       <div className=" p-2 mt-3 bg-green-100 rounded-3xl shadow-2xl hover:shadow-inner hover:bg-lime-100 border-red-700">
@@ -218,6 +207,9 @@ const Blogs = ({ job }) => {
                 <h1 className="text-xl font-bold text-center">
                   Application Deadline : {job?.date}
                 </h1>
+              </div>
+              <div className="flex justify-center mt-10">
+                <CvDrop />{' '}
               </div>
             </CardContent>
           </Collapse>
