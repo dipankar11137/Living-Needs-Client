@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import ManageBooking from './ManageBooking';
 
 const ManageBookings = () => {
@@ -11,19 +12,19 @@ const ManageBookings = () => {
   }, []);
 
   const handleDelete = id => {
-    // const proceed = window.confirm('Are You Sure ?');
-    // if (proceed) {
-    //   const url = `http://localhost:5000/allServices/${id}`;
-    //   fetch(url, {
-    //     method: 'DELETE',
-    //   })
-    //     .then(res => res.json())
-    //     .then(data => {
-    //       const remaining = booking.filter(product => product._id !== id);
-    //       setBooking(remaining);
-    //       toast.success('Successfully Remove');
-    //     });
-    // }
+    const proceed = window.confirm('Are You Sure ?');
+    if (proceed) {
+      const url = `http://localhost:5000/bookService/${id}`;
+      fetch(url, {
+        method: 'DELETE',
+      })
+        .then(res => res.json())
+        .then(data => {
+          const remaining = booking.filter(product => product._id !== id);
+          setBooking(remaining);
+          toast.success('Successfully Delivered');
+        });
+    }
   };
   return (
     <div className=" mx-6 mt-5 pb-20">
