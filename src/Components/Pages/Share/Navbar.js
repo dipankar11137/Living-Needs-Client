@@ -28,6 +28,9 @@ const Navbar = () => {
         </li>
       )}
       <li className="font-bold">
+        <Link to="/myBooking">My Booking</Link>
+      </li>
+      <li className="font-bold">
         <Link to="/contact">Contact</Link>
       </li>
     </>

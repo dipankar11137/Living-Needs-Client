@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import ManageBooking from './ManageBooking';
+import MYBooking from './MYBooking';
 
-const ManageBookings = () => {
+const MyBookings = () => {
   const [booking, setBooking] = useState([]);
 
   useEffect(() => {
@@ -27,9 +27,9 @@ const ManageBookings = () => {
     }
   };
   return (
-    <div className=" mx-6 mt-5 pb-20">
+    <div className=" pb-20 mx-10">
       <div className="overflow-x-auto">
-        <table className="table table-zebra w-full">
+        <table className="table table-zebra w-full rounded-xl">
           {/* head */}
           <thead>
             <tr className="text-center ">
@@ -40,16 +40,17 @@ const ManageBookings = () => {
               <th className="text-xl">Price</th>
               <th className="text-xl">Address</th>
               <th className="text-xl">Date</th>
-              <th className="text-xl">Delivered</th>
+              <th className="text-xl">Payment</th>
+              <th className="text-xl">Remove</th>
             </tr>
           </thead>
           <tbody>
             {booking.map(service => (
-              <ManageBooking
+              <MYBooking
                 key={service._id}
                 service={service}
                 handleDelete={handleDelete}
-              ></ManageBooking>
+              ></MYBooking>
             ))}
           </tbody>
         </table>
@@ -58,4 +59,4 @@ const ManageBookings = () => {
   );
 };
 
-export default ManageBookings;
+export default MyBookings;

@@ -28,9 +28,9 @@ import ComputerTechnicians from './Components/Pages/Home/OurServices/ComputerTec
 import Electrician from './Components/Pages/Home/OurServices/Electrician';
 import Mechanical from './Components/Pages/Home/OurServices/Mechanical';
 import VehiclesServices from './Components/Pages/Home/OurServices/VehiclesServices';
+import MyBookings from './Components/Pages/My Booking/MyBookings';
 import MyItems from "./Components/Pages/MyItems/MyItems";
-import PayNow from "./Components/Pages/MyItems/PayNow";
-import AddReview from './Components/Pages/Review/AddReview';
+import PayNow from './Components/Pages/MyItems/PayNow';
 
 Aos.init();
 
@@ -81,10 +81,10 @@ function App() {
           }
         />
         <Route
-          path="/addAReview"
+          path="/myBooking"
           element={
             <RequireAuth>
-              <AddReview />
+              <MyBookings />
             </RequireAuth>
           }
         />
