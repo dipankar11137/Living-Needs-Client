@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ManageBooking = ({ service, handleDelete }) => {
-  console.log(service);
+  // console.log(service);
   return (
     <tr className="text-center">
       <td>
