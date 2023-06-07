@@ -1,6 +1,5 @@
-import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, Outlet } from "react-router-dom";
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
@@ -40,6 +39,14 @@ const Dashboard = () => {
                   className="font-bold text-xl hover:text-orange-600"
                 >
                   Job Post
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/dashboard/manageBooking"
+                  className="font-bold text-xl hover:text-orange-600"
+                >
+                  Booking
                 </Link>
               </li>
             </ul>
