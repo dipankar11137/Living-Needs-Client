@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   useSignInWithEmailAndPassword,
+  useSignInWithFacebook,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
@@ -11,7 +12,8 @@ import Loading from '../Pages/Share/Loading';
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-
+  const [signInWithFacebook, userF, loadingF, errorF] =
+    useSignInWithFacebook(auth);
   const {
     register,
     formState: { errors },
@@ -145,6 +147,12 @@ const Login = () => {
             >
               Continue With Google
             </button>
+            {/* <button
+              onClick={() => signInWithFacebook()}
+              className="btn btn-secondary font-black"
+            >
+              Continue With Facebook
+            </button> */}
           </div>
         </div>
       </div>
