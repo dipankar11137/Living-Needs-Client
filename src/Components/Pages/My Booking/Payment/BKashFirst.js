@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { BiPhoneOutgoing } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const BKashFirst = () => {
   const [numberButton, setNumberButton] = useState(true);
   const [password, setPassword] = useState(false);
   const [passwordButton, setPasswordButton] = useState(false);
   const [vCode, setVCode] = useState(false);
+  const navigation = useNavigate();
 
   const handleNumber = () => {
     setPassword(true);
@@ -14,6 +17,14 @@ const BKashFirst = () => {
   const handlePasswordButton = () => {
     setPasswordButton(false);
     setVCode(true);
+  };
+  const handleVCode = () => {
+    toast.success('Payment Successfully');
+    navigation('/');
+  };
+  const handleCancel = () => {
+    toast.error('Payment Cancel');
+    navigation('/myBooking');
   };
   return (
     <div className="flex justify-center mt-5">
@@ -26,8 +37,8 @@ const BKashFirst = () => {
           />
           <div className="mx-[50px] w-[400] h-[150px] shadow-black shadow-md mt-5 text-white text-xl pt-8 pl-4">
             <h1>Merchant : BDSHOP.COM</h1>
-            <h1>Invoice No : </h1>
-            <h1>Amount : </h1>
+            <h1>Invoice No : ACD23FG5824DD</h1>
+            <h1>Amount : 525</h1>
           </div>
           <div className="text-center text-white mt-10 text-xl">
             <div>
@@ -46,7 +57,10 @@ const BKashFirst = () => {
                   >
                     Process
                   </button>
-                  <button className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800">
+                  <button
+                    onClick={handleCancel}
+                    className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800"
+                  >
                     Cancel
                   </button>
                 </div>
@@ -68,7 +82,10 @@ const BKashFirst = () => {
                     >
                       Process
                     </button>
-                    <button className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800">
+                    <button
+                      onClick={handleCancel}
+                      className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800"
+                    >
                       Cancel
                     </button>
                   </div>
@@ -88,10 +105,16 @@ const BKashFirst = () => {
                 </div>
 
                 <div className="flex justify-between mx-[150px] mt-3">
-                  <button className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800">
+                  <button
+                    onClick={handleVCode}
+                    className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800"
+                  >
                     Process
                   </button>
-                  <button className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800">
+                  <button
+                    onClick={handleCancel}
+                    className="bg-slate-700 px-3 py-2 rounded-lg hover:bg-slate-800"
+                  >
                     Cancel
                   </button>
                 </div>
