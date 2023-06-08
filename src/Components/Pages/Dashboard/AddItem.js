@@ -43,7 +43,7 @@ const AddItem = () => {
         >
           <div className="mt-48 pr-20 ">
             <select
-              onChange={(e) => setService(e.target.value)}
+              onChange={e => setService(e.target.value)}
               className="select select-primary w-96 max-w-xs"
             >
               <option disabled selected>
@@ -55,6 +55,8 @@ const AddItem = () => {
               <option className="text-lg text-blue-900 ">Mechanical</option>
               <option className="text-lg text-blue-900 ">Electrician</option>
               <option className="text-lg text-blue-900 ">Cleaner</option>
+              <option className="text-lg text-blue-900 ">Serif</option>
+              <option className="text-lg text-blue-900 ">Mason</option>
               <option className="text-lg text-blue-900 ">
                 AmbulanceServices
               </option>
@@ -71,15 +73,15 @@ const AddItem = () => {
               type="text"
               placeholder="Service name"
               className="input input-bordered bg-white lg:w-96 sm:w-full max-w-xs hover:shadow-xl shadow-inner"
-              {...register("name", {
+              {...register('name', {
                 required: {
                   value: true,
-                  message: "Name is Required",
+                  message: 'Name is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.name?.type === "required" && (
+              {errors.name?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.name?.message}
                 </span>
@@ -92,16 +94,16 @@ const AddItem = () => {
               type="text"
               placeholder="Images URL"
               className="input input-bordered bg-white w-full max-w-xs hover:shadow-xl shadow-inner"
-              {...register("img", {
+              {...register('img', {
                 required: {
                   value: true,
-                  message: "Images is Required",
+                  message: 'Images is Required',
                 },
               })}
             />
 
             <label className="label">
-              {errors.img?.type === "required" && (
+              {errors.img?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.img?.message}
                 </span>
@@ -115,15 +117,15 @@ const AddItem = () => {
               type="text"
               placeholder="Services Location"
               className="input input-bordered bg-white w-full max-w-xs  hover:shadow-xl shadow-inner"
-              {...register("location", {
+              {...register('location', {
                 required: {
                   value: true,
-                  message: "Location is Required",
+                  message: 'Location is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.location?.type === "required" && (
+              {errors.location?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.location?.message}
                 </span>
@@ -137,15 +139,15 @@ const AddItem = () => {
               type="text"
               placeholder="Description"
               className="input input-bordered bg-white w-full max-w-xs h-20 pt-1 hover:shadow-xl shadow-inner"
-              {...register("description", {
+              {...register('description', {
                 required: {
                   value: true,
-                  message: "Description is Required",
+                  message: 'Description is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.description?.type === "required" && (
+              {errors.description?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.description?.message}
                 </span>
@@ -159,15 +161,15 @@ const AddItem = () => {
               type="number"
               placeholder="Salary"
               className="input input-bordered bg-white w-full max-w-xs  hover:shadow-xl shadow-inner"
-              {...register("price", {
+              {...register('price', {
                 required: {
                   value: true,
-                  message: "Salary is Required",
+                  message: 'Salary is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.price?.type === "required" && (
+              {errors.price?.type === 'required' && (
                 <span className="label-text-alt text-red-500">
                   {errors?.price?.message}
                 </span>
