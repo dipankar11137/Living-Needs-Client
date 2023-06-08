@@ -26,7 +26,9 @@ import AmbulanceServices from './Components/Pages/Home/OurServices/AmbulanceServ
 import Cleaner from './Components/Pages/Home/OurServices/Cleaner';
 import ComputerTechnicians from './Components/Pages/Home/OurServices/ComputerTechnicians';
 import Electrician from './Components/Pages/Home/OurServices/Electrician';
+import Mason from './Components/Pages/Home/OurServices/Mason';
 import Mechanical from './Components/Pages/Home/OurServices/Mechanical';
+import Serif from './Components/Pages/Home/OurServices/Serif';
 import VehiclesServices from './Components/Pages/Home/OurServices/VehiclesServices';
 import MyBookings from './Components/Pages/My Booking/MyBookings';
 import BKashFirst from './Components/Pages/My Booking/Payment/BKashFirst';
@@ -70,6 +72,8 @@ function App() {
         <Route path="/cleaner" element={<Cleaner />} />
         <Route path="/ambulance" element={<AmbulanceServices />} />
         <Route path="/vehicles" element={<VehiclesServices />} />
+        <Route path="/serif" element={<Serif />} />
+        <Route path="/mason" element={<Mason />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/bookService/:id" element={<BookServices />} />
