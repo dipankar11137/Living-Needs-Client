@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import MYBooking from './MYBooking';
@@ -8,6 +9,7 @@ const MyBookings = () => {
   const [booking, setBooking] = useState([]);
   const [user] = useAuthState(auth);
   const email = user.email;
+  const navigation = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:5000/allBooking/${email}`)
@@ -15,6 +17,9 @@ const MyBookings = () => {
       .then(data => setBooking(data));
   }, [booking, email]);
 
+  const handlePayment = () => {
+    navigation('/payment');
+  };
   const handleDelete = id => {
     const proceed = window.confirm('Are You Sure ?');
     if (proceed) {
@@ -30,6 +35,7 @@ const MyBookings = () => {
         });
     }
   };
+
   return (
     <div className=" pb-20 mx-10">
       <div className="overflow-x-auto">
@@ -54,6 +60,7 @@ const MyBookings = () => {
                 key={service._id}
                 service={service}
                 handleDelete={handleDelete}
+                handlePayment={handlePayment}
               ></MYBooking>
             ))}
           </tbody>

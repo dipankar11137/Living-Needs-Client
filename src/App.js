@@ -29,6 +29,7 @@ import Electrician from './Components/Pages/Home/OurServices/Electrician';
 import Mechanical from './Components/Pages/Home/OurServices/Mechanical';
 import VehiclesServices from './Components/Pages/Home/OurServices/VehiclesServices';
 import MyBookings from './Components/Pages/My Booking/MyBookings';
+import BKashFirst from './Components/Pages/My Booking/Payment/BKashFirst';
 import MyItems from "./Components/Pages/MyItems/MyItems";
 import PayNow from './Components/Pages/MyItems/PayNow';
 
@@ -85,6 +86,14 @@ function App() {
           element={
             <RequireAuth>
               <MyBookings />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/payment"
+          element={
+            <RequireAuth>
+              <BKashFirst />
             </RequireAuth>
           }
         />
