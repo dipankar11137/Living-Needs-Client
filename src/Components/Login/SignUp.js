@@ -275,7 +275,7 @@ const SignUp = () => {
                 />
               </form>
             </div>
-            <p className="ml-32">
+            <p className="ml-16">
               <small>
                 Already Have an Account ?{' '}
                 <Link to="/login" className="text-orange-500">

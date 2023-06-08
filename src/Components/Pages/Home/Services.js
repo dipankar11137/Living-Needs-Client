@@ -105,6 +105,38 @@ const Services = () => {
               </div>
             </div>
           </Link>
+          {/* বাবুর্চি */}
+          <Link to="/serif">
+            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
+              <figure>
+                <img
+                  className="w-full pic-style"
+                  src="https://png.pngtree.com/element_our/png/20180918/chef-cooking-fried-chicken-and-delicious-sign-png_103460.jpg"
+                  alt="Shoes"
+                  style={{ height: '200px', width: '200px' }}
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title font-bold">বাবুর্চি </h2>
+              </div>
+            </div>
+          </Link>
+          {/* বাবুর্চি */}
+          <Link to="/mason">
+            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
+              <figure>
+                <img
+                  className="w-full pic-style"
+                  src="https://bdyellowpages.net/upload/9021_Raj_Mistri.png"
+                  alt="Shoes"
+                  style={{ height: '200px', width: '200px' }}
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title font-bold">রাজমিস্ত্রী </h2>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
