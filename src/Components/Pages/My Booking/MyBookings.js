@@ -44,10 +44,10 @@ const MyBookings = () => {
           <thead>
             <tr className="text-center ">
               <th></th>
-              <th className="text-xl">Name</th>
+              <th className="text-xl">Name of service provider</th>
               <th className="text-xl">Customer Name</th>
               <th className="text-xl">category</th>
-              <th className="text-xl">Price</th>
+              <th className="text-xl">Salary</th>
               <th className="text-xl">Address</th>
               <th className="text-xl">Date</th>
               <th className="text-xl">Payment</th>

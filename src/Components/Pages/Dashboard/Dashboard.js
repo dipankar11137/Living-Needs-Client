@@ -27,6 +27,14 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link
+                  to="/dashboard/myBooking"
+                  className="font-bold  text-xl hover:text-orange-600"
+                >
+                  My Booking
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/dashboard/manageItem"
                   className="font-bold text-xl hover:text-orange-600"
                 >

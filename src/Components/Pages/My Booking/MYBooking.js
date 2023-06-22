@@ -9,7 +9,7 @@ const MYBooking = ({ service, handleDelete, handlePayment }) => {
       <td>{service?.name}</td>
       <td>{service?.customerName}</td>
       <td>{service?.service}</td>
-      <td>{service?.price}</td>
+      <td>{service?.price} BDT</td>
       <td>{service?.address}</td>
       <td>{service?.date}</td>
 

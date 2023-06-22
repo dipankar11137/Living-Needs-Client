@@ -71,14 +71,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/driver" element={<Driver />} />
         <Route path="/securityGuard" element={<SecurityGuard />} />
-        <Route
+        {/* <Route
           path="/myBooking"
           element={
             <RequireAuth>
               <MyBookings />
             </RequireAuth>
           }
-        />
+        /> */}
         <Route path="/payment" element={<BKashFirst />} />
         <Route
           path="/bookService/:id"
@@ -114,6 +114,7 @@ function App() {
           }
         >
           <Route index element={<AddItem />} />
+          <Route path="myBooking" element={<MyBookings />} />
           <Route path="manageItem" element={<ManageItem />} />
           <Route path="addJobs" element={<AddJobs />} />
           <Route path="contact" element={<ManageContacts />} />

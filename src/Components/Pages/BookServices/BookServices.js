@@ -9,7 +9,7 @@ const BookServices = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
   const [bookServices, setBookServices] = useState([]);
-  // console.log(id);
+  console.log(user);
 
   const {
     register,
