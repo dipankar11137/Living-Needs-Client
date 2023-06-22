@@ -8,25 +8,25 @@ const ManageItem = () => {
   const navigator = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/allServices")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
+    fetch('http://localhost:5000/allServices')
+      .then(res => res.json())
+      .then(data => setServices(data));
+  }, [services]);
   const handleAdd = () => {
-    navigator("/dashboard");
+    navigator('/dashboard');
   };
-  const handleDelete = (id) => {
-    const proceed = window.confirm("Are You Sure ?");
+  const handleDelete = id => {
+    const proceed = window.confirm('Are You Sure ?');
     if (proceed) {
       const url = `http://localhost:5000/allServices/${id}`;
       fetch(url, {
-        method: "DELETE",
+        method: 'DELETE',
       })
-        .then((res) => res.json())
-        .then((data) => {
-          const remaining = services.filter((product) => product._id !== id);
+        .then(res => res.json())
+        .then(data => {
+          const remaining = services.filter(product => product._id !== id);
           setServices(remaining);
-          toast.success("Successfully Remove");
+          toast.success('Successfully Remove');
         });
     }
   };
@@ -40,14 +40,14 @@ const ManageItem = () => {
               <th></th>
               <th className="text-xl">Name</th>
               <th className="text-xl">category</th>
-              <th className="text-xl">Price</th>
+              <th className="text-xl">Salary</th>
               <th className="text-xl">Location</th>
               <th className="text-xl">Add </th>
               <th className="text-xl">Delete</th>
             </tr>
           </thead>
           <tbody>
-            {services.map((service) => (
+            {services.map(service => (
               <ManageSingleItem
                 key={service._id}
                 service={service}

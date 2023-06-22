@@ -92,7 +92,7 @@ const Blogs = ({ job }) => {
   const shareUrl =
     'https://jobs.bdjobs.com/jobdetails.asp?id=1131367&fcatId=8&ln=1';
   return (
-    <div className="px-40">
+    <div data-aos="zoom-in-down" data-aos-duration="2000" className="px-40 ">
       <div className=" p-2 mt-3 bg-green-100 rounded-3xl shadow-2xl hover:shadow-inner hover:bg-lime-100 border-red-700">
         <div className="grid lg:grid-cols-3 gap-1">
           <div className="h-28">

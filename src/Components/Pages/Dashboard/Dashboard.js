@@ -16,7 +16,7 @@ const Dashboard = () => {
           </div>
           <div className="drawer-side ">
             <label for="dashboard-sidebar" className="drawer-overlay "></label>
-            <ul className="menu p-4 overflow-y-auto w-56 bg-base-100 text-base-content">
+            <ul className="menu p-4 overflow-y-auto w-56 bg-base-100 text-base-content pt-20">
               <li>
                 <Link
                   to="/dashboard"
@@ -43,10 +43,10 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link
-                  to="/dashboard/manageBooking"
+                  to="/dashboard/contact"
                   className="font-bold text-xl hover:text-orange-600"
                 >
-                  Booking
+                  Manage Contact
                 </Link>
               </li>
             </ul>

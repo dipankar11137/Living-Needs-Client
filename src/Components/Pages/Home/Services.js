@@ -1,142 +1,52 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import Service from './Service';
 
 const Services = () => {
+  const [cards, setCards] = useState([]);
+  const [filteredCards, setFilteredCards] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  useEffect(() => {
+    fetch('products.json')
+      .then(res => res.json())
+      .then(data => {
+        setCards(data);
+
+        setFilteredCards(data);
+      });
+  }, []);
+  const handleSearch = e => {
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    // Filter cards based on search query
+    const filtered = cards.filter(card =>
+      card.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredCards(filtered);
+  };
   return (
-    <div className="bg-slate-200 lg:m-4 rounded-2xl pb-8">
+    <div className=" lg:m-4 rounded-2xl pb-8">
       <div className="px-12 mx-auto  mb-4">
-        <h1 className="text-black text-center text-5xl  font-bold py-6">
-          Our Services
-        </h1>
+        <div className="flex justify-between mx-20  text-center items-center mr-20 mb-5 mt-[-5px]">
+          <div>
+            <h1 className="text-black text-center text-5xl  font-bold py-6">
+              Our Services
+            </h1>
+          </div>
+          <div className=" ">
+            <input
+              className="text-black  h-10 w-[300px] rounded-lg text-xl pl-2 shadow-2xl shadow-indigo-600 hover:shadow-2xl hover:shadow-red-700 border-2 border-black"
+              type="text"
+              placeholder="Search Services..."
+              value={searchQuery}
+              onChange={handleSearch}
+            />
+          </div>
+        </div>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-3">
-          {/* Computer technician */}
-          <Link to="/computers">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://img.freepik.com/premium-vector/computer-technician-profession-mascot-logo-vector-cartoon-style_180868-1139.jpg?w=2000"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">কম্পিউটার কারিগর</h2>
-              </div>
-            </div>
-          </Link>
-          {/* Mechanical  */}
-          <Link to="/mechanical">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://thumbs.dreamstime.com/b/mechanic-man-logo-holding-huge-wrench-mechanic-man-logo-holding-huge-wrench-service-repair-maintenance-mascot-concept-160467303.jpg"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">যন্ত্র প্রকৌশল </h2>
-              </div>
-            </div>
-          </Link>
-          {/* Electrician */}
-          <Link to="/electrician">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://images-platform.99static.com/A_KEsPQVtPV0i00vJKujV7Fbmo8=/124x99:1084x1059/500x500/top/smart/99designs-contests-attachments/103/103694/attachment_103694000"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">ইলেকট্রিশিয়ান </h2>
-              </div>
-            </div>
-          </Link>
-          {/* Cleaner */}
-          <Link to="/cleaner">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://img.freepik.com/free-vector/cleaning-logo-business-composition_1284-35644.jpg?w=2000"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">পরিষ্কারক</h2>
-              </div>
-            </div>
-          </Link>
-          {/* Ambulance */}
-          <Link to="/ambulance">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://www.freepnglogos.com/uploads/ambulance-png/ambulance-interests-the-school-counselor-kind-8.png"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">অ্যাম্বুলেন্স পরিষেবা </h2>
-              </div>
-            </div>
-          </Link>
-          {/* Vehicles */}
-          <Link to="/vehicles">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://vehicledetail.info/CarSource/hero-imag.png"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">যানবাহন পরিষেবা </h2>
-              </div>
-            </div>
-          </Link>
-          {/* বাবুর্চি */}
-          <Link to="/serif">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://png.pngtree.com/element_our/png/20180918/chef-cooking-fried-chicken-and-delicious-sign-png_103460.jpg"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">বাবুর্চি </h2>
-              </div>
-            </div>
-          </Link>
-          {/* বাবুর্চি */}
-          <Link to="/mason">
-            <div className="card w- bg-base-100 text-black shadow-2xl    hover:shadow-inner">
-              <figure>
-                <img
-                  className="w-full pic-style"
-                  src="https://bdyellowpages.net/upload/9021_Raj_Mistri.png"
-                  alt="Shoes"
-                  style={{ height: '200px', width: '200px' }}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold">রাজমিস্ত্রী </h2>
-              </div>
-            </div>
-          </Link>
+          {filteredCards.slice(0, 8).map(service => (
+            <Service key={service.id} title={service.name} service={service} />
+          ))}
         </div>
       </div>
     </div>

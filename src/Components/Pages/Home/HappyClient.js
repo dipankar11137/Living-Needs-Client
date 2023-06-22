@@ -10,9 +10,9 @@ const HappyClient = () => {
       <div className="grid grid-cols-2 gap-8">
         <div>
           <h1 className="text-2xl mt-20">
-            এই ধরনের পরিষেবা প্ল্যাটফর্ম অন্যান্য দেশে উপলব্ধ। আমার আছে আমি যখন
-            বিদেশে ছিলাম তখন ব্যক্তিগতভাবে সেগুলি ব্যবহার করতাম। আমি খুব খুশি যে
-            এই ধরনের বাংলাদেশেও এখানে একটি পোর্টাল পাওয়া যায়। ধন্যবাদ
+            Such service platforms are available in other countries. I have when
+            I I personally used them when I was abroad. I am very happy that
+            Such a portal in Bangladesh is also available here. thank you
           </h1>
           <h1 className="text-xl font-semibold mt-3">Nusrat Faria</h1>
           <p>IT Consultant, Dhaka</p>

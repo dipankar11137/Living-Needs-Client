@@ -1,19 +1,15 @@
 import React from 'react';
 import {
   useSignInWithEmailAndPassword,
-  useSignInWithFacebook,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Footer from '../Pages/Share/Footer';
 import Loading from '../Pages/Share/Loading';
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-  const [signInWithFacebook, userF, loadingF, errorF] =
-    useSignInWithFacebook(auth);
   const {
     register,
     formState: { errors },
@@ -49,14 +45,16 @@ const Login = () => {
   const onSubmit = async data => {
     const email = data.email;
     await signInWithEmailAndPassword(data.email, data.password);
+
+    // console.log(accesstoken);
   };
 
   return (
-    <div>
-      <div className="flex justify-center  bg-slate-300 pb-52 pt-5 ">
+    <div data-aos="zoom-in-down" data-aos-duration="2000" className="h-screen">
+      <div className="flex justify-center items-center h-screen bg-slate-300 pb-52 pt-5 ">
         <div className="card w-96 shadow-2xl bg-violet-50 hover:shadow-inner">
           <div className="card-body">
-            <h2 className="text-center text-2xl">Login</h2>
+            <h2 className="text-center text-2xl font-extrabold">Login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
@@ -132,31 +130,15 @@ const Login = () => {
             </form>
             <p>
               <small>
-                New to Man Power Services ?{' '}
+                New to Living Needs ?{' '}
                 <Link to="/signup" className="text-orange-600">
                   Create New Account
                 </Link>
               </small>
             </p>
           </div>
-          <div className="divider">OR</div>
-          <div className="flex justify-center pb-5">
-            <button
-              onClick={() => signInWithGoogle()}
-              className="btn btn-secondary font-black"
-            >
-              Continue With Google
-            </button>
-            {/* <button
-              onClick={() => signInWithFacebook()}
-              className="btn btn-secondary font-black"
-            >
-              Continue With Facebook
-            </button> */}
-          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

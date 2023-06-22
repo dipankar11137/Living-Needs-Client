@@ -3,8 +3,8 @@ import Footer from "../Share/Footer";
 
 const About = () => {
   return (
-    <div>
-      <div className="hero min-h-screen bg-base-200">
+    <div className="bg-slate-300">
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row gap-8">
           <img
             src="https://www.mondaymorning.in/web_css_js/image/job-not-found.png"
@@ -14,21 +14,20 @@ const About = () => {
           <div className="ms-32">
             <h1 className="text-5xl font-bold text-rose-800 ">About Us</h1>
             <p className="py-6 text-2xl">
-              একটি কর্মসংস্থান ওয়েবসাইট এমন একটি ওয়েবসাইট যা বিশেষভাবে
-              কর্মসংস্থান বা ক্যারিয়ার নিয়ে কাজ করে। অনেক কর্মসংস্থান
-              ওয়েবসাইট এমনভাবে ডিজাইন করা হয়েছে যাতে নিয়োগকর্তারা একটি পদ
-              পূরণের জন্য চাকরির প্রয়োজনীয়তা পোস্ট করতে পারেন এবং সাধারণত জব
-              বোর্ড নামে পরিচিত। আপনি কি সেই ব্যক্তি যিনি আপনার প্রতিষ্ঠানের
-              জন্য সেরা কর্মচারী চান? আপনি কি আপনার কোম্পানিতে চাকরির শূন্যপদের
-              বিজ্ঞাপন দিতে চান? শুধুমাত্র চাকরির পোর্টাল তৈরি করে বা তৈরি করে
-              আপনার সমস্ত সমস্যার সমাধান করুন। এই নিবন্ধে, আমরা চাকরির পোর্টালের
-              গুরুত্ব, চাকরির পোর্টালগুলির জন্য ওয়েবসাইট বিকাশ এবং ভারতের সেরা
-              চাকরির পোর্টালগুলির গুরুত্ব নিয়ে আলোচনা করেছি। ইন্টারনেট একটি বড়
-              জায়গা যেখানে প্রতিদিন 3 বিলিয়নেরও বেশি মানুষ এটি ব্যবহার করে -
-              কিছু ব্যক্তিগত এবং কিছু ব্যবসায়িক ব্যবহারের জন্য। সমীক্ষা
-              অনুসারে, ভারত ইন্টারনেটের দ্বিতীয় সর্বোচ্চ ব্যবহারকারী। ভারতের
-              জনসংখ্যার প্রায় 26% ইন্টারনেট ব্যবহার করে। ইন্টারনেট ব্যবহার করার
-              বিভিন্ন কারণ রয়েছে।
+              An employment website is a website that deals specifically with
+              employment or careers. Many employment websites are designed to
+              allow employers to post job requirements to fill a position and
+              are commonly known as job boards. Are you the person who wants the
+              best employees for your organization? Do you want to advertise job
+              vacancies in your company? Solve all your problems just by
+              creating or creating job portal. In this article, we have
+              discussed the importance of job portals, website development for
+              job portals and best job portals in India. The Internet is a big
+              place with more than 3 billion people using it every day - some
+              for personal and some for business use. According to the survey,
+              India is the second highest user of internet. About 26% of India's
+              population uses the Internet. There are various reasons for using
+              the Internet.
             </p>
             <button data-theme="autumn" className="btn btn-orange-500">
               See More

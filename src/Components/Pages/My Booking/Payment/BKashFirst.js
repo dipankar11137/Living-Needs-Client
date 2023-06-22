@@ -27,14 +27,23 @@ const BKashFirst = () => {
     navigation('/myBooking');
   };
   return (
-    <div className="flex justify-center mt-5">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      data-aos-duration="3000"
+      className="flex justify-center mt-5 h-screen"
+    >
       <div>
-        <div className="bg-pink-700 w-[500px] h-[650px]">
-          <img
-            className="pt-2"
-            src="https://raw.githubusercontent.com/Shipu/bkash-example/master/bkash_payment_logo.png"
-            alt=""
-          />
+        <div className="bg-pink-700 w-[500px] h-[650px] ">
+          <div className="pt-2">
+            <img
+              className=" h-32 bg-white "
+              // className="pt-2"
+              src="https://community.appinventor.mit.edu/uploads/default/original/3X/7/e/7e5d178642a95e6ecc3dd1d2e12afd0b34bd3031.png"
+              // src="https://raw.githubusercontent.com/Shipu/bkash-example/master/bkash_payment_logo.png"
+              alt=""
+            />
+          </div>
           <div className="mx-[50px] w-[400] h-[150px] shadow-black shadow-md mt-5 text-white text-xl pt-8 pl-4">
             <h1>Merchant : BDSHOP.COM</h1>
             <h1>Invoice No : ACD23FG5824DD</h1>

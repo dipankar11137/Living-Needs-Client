@@ -59,7 +59,6 @@ const Footer = () => {
             </a>
           </div>
           <p>Copyright &copy; {year} </p>
-          <p>Develop By Dipu</p>
         </div>
       </footer>
     </div>

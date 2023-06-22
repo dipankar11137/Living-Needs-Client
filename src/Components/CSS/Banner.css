@@ -50,6 +50,7 @@
 .heroBtn {
   border-radius: 0;
   border: 0;
+  
 }
 
 /* large device  600px and up) */
@@ -86,12 +87,14 @@
     letter-spacing: 2px;
     padding-bottom: 10px;
     text-transform: uppercase;
+
   }
 
   .heroP {
     font-size: 18px;
     letter-spacing: 1px;
     text-align: start;
+  
   }
 
   .heroP2 {
@@ -99,5 +102,6 @@
     font-weight: 200px;
     letter-spacing: 1px;
     text-align: end;
+      
   }
 }

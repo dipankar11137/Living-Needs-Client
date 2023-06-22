@@ -1,13 +1,9 @@
 import React from "react";
-import "../../CSS/Banner.css";
-import airpot from "../../Images/Banner/airpot-1.jpg";
-import laptop from "../../Images/Banner/laptop.jpg";
-import iPad from "../../Images/Banner/ipad-1.jpg";
-import "../../CSS/PicStyle.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import '../../CSS/Banner.css';
+import '../../CSS/PicStyle.css';
 
 const Banner = () => {
   var settings = {
@@ -18,7 +14,7 @@ const Banner = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
-    cssEase: "linear",
+    cssEase: 'linear',
     pauseOnHover: true,
     fade: true,
   };
@@ -27,110 +23,23 @@ const Banner = () => {
       <div div className="relative  w-full">
         <img
           className="object-fill sliderImg  w-full rounded-2xl"
-          src="https://mobisoftinfotech.com/resources/wp-content/uploads/2018/08/Banner.png"
+          src="https://www.wallsauce.com/uploads/wallsauce-com/images/thumbs/600/adac0cf85bba824e9f6b9a320a6505929330c6a9_800__R_N_90.jpg"
           alt=""
         />
-        {/* <div className="absolute1 flex flex-col  justify-start">
-          <div>
-            <p className="heroP text-lime-200 ">
-              {" "}
-              City<span className="text-orange-300">
-                Crown
-              </span> Electronics{" "}
-            </p>
-          </div>
-          <div>
-            <h1 className="heroHead text-start ">MackBook Pro</h1>
-          </div>
-          <div>
-            <p className="heroP text-white pb-4 ">
-              {" "}
-              Apple Product dolor amet consectetur <br />
-              adipisicing Nobis, excepturi.{" "}
-            </p>
-          </div>
-
-          <div className=" flex justify-start">
-            <Link
-              to="/showAllProducts"
-              className=" btn bg-orange-600 text-italic font-bold"
-            >
-              Buy now
-            </Link>
-          </div>
-        </div> */}
       </div>
       <div div className="relative    w-full  ">
         <img
           className="object-fill sliderImg   w-full  rounded-2xl"
-          src="https://www.posist.com/restaurant-times/wp-content/uploads/2019/08/delivery.jpg"
+          src="https://s.yimg.com/ny/api/res/1.2/pnfJx2OIxIpK0R11Dbf48Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ2MA--/https://media.zenfs.com/en/house_beautiful_336/489e7828ccb639b5846dea9fe8c4f445"
           alt=""
         />
-        {/* <div className="absolute1 flex flex-col  justify-start">
-          <div className="mt-36">
-            <p className="heroP text-lime-500 ">
-              {" "}
-              City<span className="text-orange-500">
-                Crown
-              </span> Electronics{" "}
-            </p>
-          </div>
-          <div>
-            <h1 className="heroHead text-start ">EarPot V4</h1>
-          </div>
-          <div>
-            <p className="heroP text-white pb-4 ">
-              {" "}
-              Apple Product dolor amet consectetur <br />
-              adipisicing Nobis, excepturi.{" "}
-            </p>
-          </div>
-
-          <div className=" flex justify-start">
-            <Link
-              to="/showAllProducts"
-              className=" btn bg-orange-600 text-italic font-bold"
-            >
-              Buy now
-            </Link>
-          </div>
-        </div> */}
       </div>
       <div div className="relative   w-full  ">
         <img
           className="object-fill sliderImg   w-full  rounded-2xl"
-          src="https://www.mawbiz.com.bd/application/views/module/product_image/city-home-cleaning-service_1.jpg"
+          src="https://images.squarespace-cdn.com/content/v1/5d13d68c02222100019644ff/1631638802745-YAX1FXF1PUEY2LCCKMO3/celeste-jackson-interiors-barrinton-il-wallpaper-white-and-blue-designed-wallpaper-in-modern-bedroom.png"
           alt=""
         />
-        {/* <div className="absolute1 flex flex-col  justify-start">
-          <div>
-            <p className="heroP text-lime-500 ">
-              {" "}
-              City<span className="text-orange-500">
-                Crown
-              </span> Electronics{" "}
-            </p>
-          </div>
-          <div>
-            <h1 className="heroHead text-start ">iPad Pro</h1>
-          </div>
-          <div>
-            <p className="heroP text-white pb-4 ">
-              {" "}
-              Apple Product dolor amet consectetur <br />
-              adipisicing Nobis, excepturi.{" "}
-            </p>
-          </div>
-
-          <div className=" flex justify-start">
-            <Link
-              to="/showAllProducts"
-              className=" btn bg-orange-600 text-italic font-bold"
-            >
-              Buy now
-            </Link>
-          </div>
-        </div> */}
       </div>
     </Slider>
   );

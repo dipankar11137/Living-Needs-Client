@@ -37,7 +37,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-slate-800 text-white  ">
+    <div className="navbar bg-green-800 text-white  ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -64,9 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <h1 className="pl-20 text-2xl font-bold">
-            Daily Needs / Man Power Services
-          </h1>
+          <h1 className="pl-40 text-2xl font-bold">Living Needs</h1>
           {/* <a className="btn btn-ghost normal-case text-xl pl-20">
             <img className="w-14 rounded-2xl " src={logo} alt="" />
           </a> */}
@@ -84,7 +82,7 @@ const Navbar = () => {
         <ul>
           <li className=" font-bold pr-20">
             {user ? (
-              <button className="btn font-bold" onClick={logout}>
+              <button className=" font-bold" onClick={logout}>
                 Sign Out
               </button>
             ) : (

@@ -1,74 +1,62 @@
 [
   {
     "_id": 1,
-    "name": "Abdul",
-    "price": "90",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://img.freepik.com/premium-photo/smiling-technician-working-broken-computer_13339-278445.jpg"
+    "name": "Computer Technician",
+    "link": "computers",
+    "img": "https://img.freepik.com/premium-vector/computer-technician-profession-mascot-logo-vector-cartoon-style_180868-1139.jpg?w=2000"
   },
   {
     "_id": 2,
-    "name": "Sattar",
-    "price": "99",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://img.freepik.com/free-photo/young-male-technician-wearing-gloves-fixing-computer-motherboard-with-screwdriver_23-2147922176.jpg"
+    "name": "Mechanical",
+    "link": "mechanical",
+    "img": "https://thumbs.dreamstime.com/b/mechanic-man-logo-holding-huge-wrench-mechanic-man-logo-holding-huge-wrench-service-repair-maintenance-mascot-concept-160467303.jpg"
   },
   {
     "_id": 3,
-    "name": "Maria",
-    "price": "89",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://previews.123rf.com/images/ljupco/ljupco1604/ljupco160400270/56183460-cheerful-female-it-technician-holding-a-computer-part-and-a-screwdriver-isolated-on-white-background.jpg"
+    "name": "Electrician",
+    "link": "electrician",
+    "img": "https://images-platform.99static.com/A_KEsPQVtPV0i00vJKujV7Fbmo8=/124x99:1084x1059/500x500/top/smart/99designs-contests-attachments/103/103694/attachment_103694000"
   },
   {
     "_id": 4,
-    "name": "Faria",
-    "price": "78",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://www.insureon.com/-/media/blog/posts/2019/photo_woman-fixing-computer.jpg?h=375&iar=0&w=750&rev=23f11902252843bcbb9b509ef57e942c"
+    "name": "Cleaner",
+    "link": "cleaner",
+    "img": "https://img.freepik.com/free-vector/cleaning-logo-business-composition_1284-35644.jpg?w=2000"
   },
   {
     "_id": 5,
-    "name": "Josaf",
-    "price": "67",
-    "description": "A good worker",
-    "location": "Barishal",
-    "img": "https://qfix.com.bd/wp-content/uploads/2022/03/437345-PEBLQ6-57.jpg"
+    "name": "Ambulance Service",
+    "link": "ambulance",
+    "img": "https://www.freepnglogos.com/uploads/ambulance-png/ambulance-interests-the-school-counselor-kind-8.png"
   },
   {
     "_id": 6,
-    "name": "Karim",
-    "price": "50",
-    "description": "A good worker",
-    "location": "Khulna",
-    "img": "https://media.istockphoto.com/id/1347879841/photo/shot-of-a-young-man-using-a-laptop-while-working-in-a-server-room.jpg?b=1&s=170667a&w=0&k=20&c=YkMrXkBzpgYGlCu1WlZn8t9yEWh7ztalNa78aLpn-d4="
+    "name": "Vehicle Service",
+    "link": "vehicles",
+    "img": "https://vehicledetail.info/CarSource/hero-imag.png"
   },
   {
     "_id": 7,
-    "name": "Sattar",
-    "price": "76",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://www.onlinedegree.com/wp-content/uploads/2016/11/computer_repair_technician-700x467.jpg"
+    "name": "Driver",
+    "link": "driver",
+    "img": "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/26854/boy-driving-car-cartoon-clipart-xl.png"
   },
   {
     "_id": 8,
-    "name": "Kalam",
-    "price": "82",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://www.insureon.com/-/media/blog/posts/2020/photo_technician-repairing-computer.jpg?h=370&iar=0&w=750&rev=256c85894eb9484791c011b975eb847f"
+    "name": "Security Guard",
+    "link": "securityGuard",
+    "img": "https://www.nicepng.com/png/detail/580-5805528_jpg-freeuse-download-clipart-policeman-security-guard-cartoon.png"
   },
   {
     "_id": 9,
-    "name": "Kaluka",
-    "price": "96",
-    "description": "A good worker",
-    "location": "Dhaka",
-    "img": "https://t3.ftcdn.net/jpg/04/61/48/90/360_F_461489085_gvKVCQhyl30MHDi5X1jkRW0e1XV840rd.jpg"
+    "name": "Hori Guard",
+    "link": "securityGuard",
+    "img": "https://vehicledetail.info/CarSource/hero-imag.png"
+  },
+  {
+    "_id": 10,
+    "name": "Partha",
+    "link": "securityGuard",
+    "img": "https://vehicledetail.info/CarSource/hero-imag.png"
   }
 ]

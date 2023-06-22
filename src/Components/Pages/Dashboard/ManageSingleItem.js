@@ -8,7 +8,7 @@ const ManageSingleItem = ({ service, handleAdd, handleDelete }) => {
       </td>
       <td>{service?.name}</td>
       <td>{service?.service}</td>
-      <td>{service?.price}</td>
+      <td>{service?.price} BDT</td>
       <td>{service?.location}</td>
       <td>
         <button onClick={handleAdd} className="btn btn-info font-bold">

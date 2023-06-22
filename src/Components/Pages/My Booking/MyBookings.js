@@ -37,7 +37,7 @@ const MyBookings = () => {
   };
 
   return (
-    <div className=" pb-20 mx-10">
+    <div className=" pb-20 mx-10 h-screen">
       <div className="overflow-x-auto">
         <table className="table table-zebra w-full rounded-xl">
           {/* head */}

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const AddJobs = () => {
-  const [employeeStatus, setEmployeeStatus] = useState("");
+  const [employeeStatus, setEmployeeStatus] = useState('');
   // console.log(employeeStatus);
   const {
     register,
@@ -11,20 +11,20 @@ const AddJobs = () => {
     handleSubmit,
     reset,
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     const changeUrl = { ...data, employeeStatus: employeeStatus };
     // console.log(changeUrl);
     const url = `http://localhost:5000/jobs`;
     fetch(url, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
       body: JSON.stringify(changeUrl),
     })
-      .then((res) => res.json())
-      .then((result) => {
-        toast.success("Successfully Add A Job");
+      .then(res => res.json())
+      .then(result => {
+        toast.success('Successfully Add A Job');
         reset();
       });
   };
@@ -40,94 +40,82 @@ const AddJobs = () => {
             </span>
           </label> */}
             <h1 className="pb-5 text-3xl pl-2 font-bold uppercase">
-              Post A Job{" "}
+              Post A Job{' '}
             </h1>
             <input
               type="text"
               placeholder="Company Name"
-              className="input input-bordered text-xl pt-1 bg-white w-full  hover:shadow-xl"
-              {...register("companyName", {
+              className="input input-bordered text-xl pt-1 bg-white w-full  hover:shadow-xl  border-b-blue-900"
+              {...register('companyName', {
                 required: {
                   value: true,
-                  message: "Company Name is Required",
+                  message: 'Company Name is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.companyName?.type === "required" && (
+              {errors.companyName?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.companyName?.message}
                 </span>
               )}
             </label>
             {/*photo Url */}
-            {/* <label className="label">
-            <span className="label-text font-bold text-lime-700 text-xl">
-              Company Logo
-            </span>
-          </label> */}
+
             <input
               type="img"
               placeholder="Company Logo Url"
-              className="input input-bordered  pt-1 bg-white w-full   text-xl hover:shadow-xl"
-              {...register("companyLogo", {
+              className="input input-bordered  pt-1 bg-white w-full   text-xl hover:shadow-xl border-b-blue-900"
+              {...register('companyLogo', {
                 required: {
                   value: true,
-                  message: "Company Logo is Required",
+                  message: 'Company Logo is Required',
                 },
               })}
             />
 
             <label className="label">
-              {errors.companyLogo?.type === "required" && (
+              {errors.companyLogo?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.companyLogo?.message}
                 </span>
               )}
             </label>
             {/*job Name */}
-            {/* <label className="label">
-            <span className="label-text font-bold text-lime-700 text-xl">
-              Job Name
-            </span>
-          </label> */}
+
             <input
               type="text"
               placeholder="Job Name"
-              className="input input-bordered text-xl pt-1 bg-white w-full    hover:shadow-xl"
-              {...register("jobName", {
+              className="input input-bordered text-xl pt-1 bg-white w-full    hover:shadow-xl border-b-blue-900"
+              {...register('jobName', {
                 required: {
                   value: true,
-                  message: "Job Name is Required",
+                  message: 'Job Name is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.jobName?.type === "required" && (
+              {errors.jobName?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.jobName?.message}
                 </span>
               )}
             </label>
             {/*job LOcation */}
-            {/* <label className="label">
-            <span className="label-text font-bold text-lime-700 text-xl">
-              Location
-            </span>
-          </label> */}
+
             <input
               type="text"
               placeholder="Location"
-              className="input input-bordered text-xl pt-1 bg-white w-full    hover:shadow-xl"
-              {...register("location", {
+              className="input input-bordered text-xl pt-1 bg-white w-full    hover:shadow-xl border-b-blue-900"
+              {...register('location', {
                 required: {
                   value: true,
-                  message: "Location Name is Required",
+                  message: 'Location Name is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.location?.type === "required" && (
+              {errors.location?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.location?.message}
                 </span>
@@ -138,16 +126,16 @@ const AddJobs = () => {
             <input
               type="number"
               placeholder="Experience Year"
-              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl"
-              {...register("experience", {
+              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl border-b-blue-900"
+              {...register('experience', {
                 required: {
                   value: true,
-                  message: "Experience is Required",
+                  message: 'Experience is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.experience?.type === "required" && (
+              {errors.experience?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.experience?.message}
                 </span>
@@ -157,16 +145,16 @@ const AddJobs = () => {
             <input
               type="number"
               placeholder="Vacancy "
-              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl"
-              {...register("vacancy", {
+              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl border-b-blue-900"
+              {...register('vacancy', {
                 required: {
                   value: true,
-                  message: "vacancy is Required",
+                  message: 'vacancy is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.vacancy?.type === "required" && (
+              {errors.vacancy?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.vacancy?.message}
                 </span>
@@ -176,16 +164,16 @@ const AddJobs = () => {
             <textarea
               type="text"
               placeholder="Job Responsibilities "
-              className="input input-bordered  bg-white w-full   h-20 text-xl hover:shadow-xl"
-              {...register("jobResponsibilities", {
+              className="input input-bordered  bg-white w-full   h-20 text-xl hover:shadow-xl border-b-blue-900"
+              {...register('jobResponsibilities', {
                 required: {
                   value: true,
-                  message: "Job Responsibilities is Required",
+                  message: 'Job Responsibilities is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.jobResponsibilities?.type === "required" && (
+              {errors.jobResponsibilities?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.jobResponsibilities?.message}
                 </span>
@@ -193,8 +181,8 @@ const AddJobs = () => {
             </label>
             {/* Employment Status */}
             <select
-              onChange={(e) => setEmployeeStatus(e.target.value)}
-              className="select select-primary w-96   mb-3"
+              onChange={e => setEmployeeStatus(e.target.value)}
+              className="select select-primary w-96   mb-3 text-xl"
             >
               <option disabled selected>
                 Employment Status
@@ -202,22 +190,23 @@ const AddJobs = () => {
 
               <option className="text-lg text-blue-900 ">Part Time</option>
               <option className="text-lg text-blue-900 ">Full Time</option>
+              <option className="text-lg text-blue-900 ">Remote</option>
             </select>
 
             {/* Educational Requirements */}
             <textarea
               type="text"
               placeholder="Educational Requirements "
-              className="input input-bordered  bg-white w-full   h-20 text-xl hover:shadow-xl"
-              {...register("educationalRequirements", {
+              className="input input-bordered  bg-white w-full   h-20 text-xl hover:shadow-xl border-b-blue-900"
+              {...register('educationalRequirements', {
                 required: {
                   value: true,
-                  message: "Educational Requirements is Required",
+                  message: 'Educational Requirements is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.educationalRequirements?.type === "required" && (
+              {errors.educationalRequirements?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.educationalRequirements?.message}
                 </span>
@@ -227,16 +216,16 @@ const AddJobs = () => {
             <textarea
               type="text"
               placeholder="Additional Requirements "
-              className="input input-bordered  bg-white w-full   h-20 text-xl hover:shadow-xl"
-              {...register("additionalRequirements", {
+              className="input input-bordered  bg-white w-full   h-20 text-xl hover:shadow-xl border-b-blue-900"
+              {...register('additionalRequirements', {
                 required: {
                   value: true,
-                  message: "Additional Requirements is Required",
+                  message: 'Additional Requirements is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.additionalRequirements?.type === "required" && (
+              {errors.additionalRequirements?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.additionalRequirements?.message}
                 </span>
@@ -246,16 +235,16 @@ const AddJobs = () => {
             <input
               type="number"
               placeholder="Salary "
-              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl"
-              {...register("salary", {
+              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl border-b-blue-900"
+              {...register('salary', {
                 required: {
                   value: true,
-                  message: "Salary is Required",
+                  message: 'Salary is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.salary?.type === "required" && (
+              {errors.salary?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.salary?.message}
                 </span>
@@ -265,16 +254,16 @@ const AddJobs = () => {
             <input
               type="email"
               placeholder="Email Address "
-              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl"
-              {...register("email", {
+              className="input input-bordered  bg-white w-full    text-xl hover:shadow-xl border-b-blue-900"
+              {...register('email', {
                 required: {
                   value: true,
-                  message: "Email is Required",
+                  message: 'Email is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.email?.type === "required" && (
+              {errors.email?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.email?.message}
                 </span>
@@ -289,16 +278,16 @@ const AddJobs = () => {
             <input
               type="date"
               placeholder="Application Deadline"
-              className="input input-bordered  bg-white w-full    hover:shadow-xl"
-              {...register("date", {
+              className="input input-bordered  bg-white w-full    hover:shadow-xl border-b-blue-900"
+              {...register('date', {
                 required: {
                   value: true,
-                  message: "Date is Required",
+                  message: 'Date is Required',
                 },
               })}
             />
             <label className="label">
-              {errors.date?.type === "required" && (
+              {errors.date?.type === 'required' && (
                 <span className="label-text-alt text-red-500 text-xl">
                   {errors?.date?.message}
                 </span>
@@ -319,11 +308,6 @@ const AddJobs = () => {
                 value="Submit"
               />
             )}
-            {/* <input
-            className="btn  w-full text-white mt-5"
-            type="submit"
-            value="Submit"
-          /> */}
           </form>
         </div>
       </div>
