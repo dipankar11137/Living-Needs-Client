@@ -22,7 +22,7 @@ const Navbar = () => {
       <li className="font-bold">
         <Link to="/blogs">Needs Job</Link>
       </li>
-      {user?.email === 'abc@def.com' && (
+      {user && (
         <li className="font-bold">
           <Link to="/dashboard">Dashboard</Link>
         </li>

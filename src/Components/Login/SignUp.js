@@ -68,9 +68,8 @@ const SignUp = () => {
     })
       .then(res => res.json())
       .then(data => {
-        // console.log(data);
+        toast.success('Update Profile');
       });
-    toast.success('Update Profile');
   };
 
   const onSubmit = async data => {
@@ -78,7 +77,6 @@ const SignUp = () => {
     await updateProfile({ displayName: data.name });
 
     createDBUser(data);
-    toast.success('Updated profile');
   };
 
   return (

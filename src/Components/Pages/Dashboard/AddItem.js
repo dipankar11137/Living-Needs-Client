@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 
 const AddItem = () => {
   const [user] = useAuthState(auth);
+  const email = user?.email;
   const [service, setService] = useState('');
   const imageHostKey = '39899c0cdbfbe66a2dbde3818a91832c';
 
@@ -28,7 +29,7 @@ const AddItem = () => {
       .then(res => res.json())
       .then(imageData => {
         const image = imageData.data.url;
-        const changeUrl = { ...data, service: service, img: image };
+        const changeUrl = { ...data, service: service, img: image, email };
         console.log(changeUrl);
 
         fetch(`http://localhost:5000/allServices`, {
