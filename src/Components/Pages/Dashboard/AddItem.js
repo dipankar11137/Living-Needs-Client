@@ -70,6 +70,8 @@ const AddItem = () => {
               <option className="text-lg text-blue-900 ">Mechanical</option>
               <option className="text-lg text-blue-900 ">Electrician</option>
               <option className="text-lg text-blue-900 ">Cleaner</option>
+              <option className="text-lg text-blue-900 ">Baburchi</option>
+              <option className="text-lg text-blue-900 ">Servant</option>
               <option className="text-lg text-blue-900 ">
                 AmbulanceServices
               </option>

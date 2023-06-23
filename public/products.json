@@ -49,14 +49,14 @@
   },
   {
     "_id": 9,
-    "name": "Hori Guard",
-    "link": "securityGuard",
-    "img": "https://vehicledetail.info/CarSource/hero-imag.png"
+    "name": "Baburchi ",
+    "link": "baburchi",
+    "img": "https://play-lh.googleusercontent.com/SSSqrp8slu-iyrx0la6HUw14dq4OKM9INhgB3_34W8OO8DuXVNyZB3J48NlE6hGn2TvF=w240-h480-rw"
   },
   {
     "_id": 10,
-    "name": "Partha",
-    "link": "securityGuard",
-    "img": "https://vehicledetail.info/CarSource/hero-imag.png"
+    "name": "Servant",
+    "link": "servant",
+    "img": "https://img.freepik.com/premium-vector/waiters_48692-3.jpg?w=360"
   }
 ]
