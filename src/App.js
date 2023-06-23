@@ -24,12 +24,14 @@ import BookServices from './Components/Pages/BookServices/BookServices';
 import AddJobs from './Components/Pages/Dashboard/AddJobs';
 import ManageContacts from './Components/Pages/Dashboard/ManageContacts';
 import AmbulanceServices from './Components/Pages/Home/OurServices/AmbulanceServices';
+import Baburchi from './Components/Pages/Home/OurServices/Baburchi';
 import Cleaner from './Components/Pages/Home/OurServices/Cleaner';
 import ComputerTechnicians from './Components/Pages/Home/OurServices/ComputerTechnicians';
 import Driver from './Components/Pages/Home/OurServices/Driver';
 import Electrician from './Components/Pages/Home/OurServices/Electrician';
 import Mechanical from './Components/Pages/Home/OurServices/Mechanical';
 import SecurityGuard from './Components/Pages/Home/OurServices/SecurityGuard';
+import Servant from './Components/Pages/Home/OurServices/Servant';
 import VehiclesServices from './Components/Pages/Home/OurServices/VehiclesServices';
 import MyBookings from './Components/Pages/My Booking/MyBookings';
 import BKashFirst from './Components/Pages/My Booking/Payment/BKashFirst';
@@ -71,6 +73,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/driver" element={<Driver />} />
         <Route path="/securityGuard" element={<SecurityGuard />} />
+        <Route path="/baburchi" element={<Baburchi />} />
+        <Route path="/servant" element={<Servant />} />
         {/* <Route
           path="/myBooking"
           element={
