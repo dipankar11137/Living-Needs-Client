@@ -60,7 +60,7 @@ const SignUp = () => {
     const updateData = { email, address, name, nid, phone };
     // console.log(updateData);
     fetch(`http://localhost:5000/create-user/${email}`, {
-      method: 'POST',
+      method: 'PUT',
       headers: {
         'content-type': 'application/json',
       },

@@ -23,6 +23,7 @@ import Blog from './Components/Pages/Blogs/Blog';
 import BookServices from './Components/Pages/BookServices/BookServices';
 import AddJobs from './Components/Pages/Dashboard/AddJobs';
 import ManageContacts from './Components/Pages/Dashboard/ManageContacts';
+import Profile from './Components/Pages/Dashboard/Profile/Profile';
 import AmbulanceServices from './Components/Pages/Home/OurServices/AmbulanceServices';
 import Baburchi from './Components/Pages/Home/OurServices/Baburchi';
 import Cleaner from './Components/Pages/Home/OurServices/Cleaner';
@@ -118,6 +119,7 @@ function App() {
           }
         >
           <Route index element={<AddItem />} />
+          <Route path="editProfile" element={<Profile />} />
           <Route path="myBooking" element={<MyBookings />} />
           <Route path="manageItem" element={<ManageItem />} />
           <Route path="addJobs" element={<AddJobs />} />
