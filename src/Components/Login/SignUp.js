@@ -50,6 +50,8 @@ const SignUp = () => {
       </p>
     );
   }
+  const image =
+    'https://media.istockphoto.com/id/1393750072/vector/flat-white-icon-man-for-web-design-silhouette-flat-illustration-vector-illustration-stock.jpg?s=612x612&w=0&k=20&c=s9hO4SpyvrDIfELozPpiB_WtzQV9KhoMUP9R9gVohoU=';
 
   const createDBUser = data => {
     const email = data.email;
@@ -57,7 +59,7 @@ const SignUp = () => {
     const name = data.name;
     const nid = data.nid;
     const phone = data.phone;
-    const updateData = { email, address, name, nid, phone };
+    const updateData = { email, address, name, nid, phone, image };
     // console.log(updateData);
     fetch(`http://localhost:5000/create-user/${email}`, {
       method: 'PUT',

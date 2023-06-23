@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -6,8 +6,18 @@ import auth from '../../../../../firebase.init';
 
 const AddReview = ({ email, setReview }) => {
   const [user] = useAuthState(auth);
-  const userName = user?.displayName;
+  const [users, setUser] = useState([]);
   const [rating, setRating] = useState('');
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/user/${user?.email}`)
+      .then(res => res.json())
+      .then(data => setUser(data));
+  }, [users, user?.email]);
+
+  const image = users[0]?.image;
+  const name = users[0]?.name;
+
   const {
     register,
     formState: { errors },
@@ -15,7 +25,7 @@ const AddReview = ({ email, setReview }) => {
     reset,
   } = useForm();
   const onSubmit = data => {
-    const updateData = { ...data, email, rating, userName };
+    const updateData = { ...data, email, rating, userName: name, image };
 
     fetch(`http://localhost:5000/review`, {
       method: 'POST',

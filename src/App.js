@@ -24,6 +24,7 @@ import BookServices from './Components/Pages/BookServices/BookServices';
 import AddJobs from './Components/Pages/Dashboard/AddJobs';
 import ManageContacts from './Components/Pages/Dashboard/ManageContacts';
 import MyProfile from './Components/Pages/Dashboard/Profile/MyProfile';
+import ShowProfile from './Components/Pages/Dashboard/Profile/ShowProfile';
 import AmbulanceServices from './Components/Pages/Home/OurServices/AmbulanceServices';
 import Baburchi from './Components/Pages/Home/OurServices/Baburchi';
 import Cleaner from './Components/Pages/Home/OurServices/Cleaner';
@@ -118,7 +119,8 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<AddItem />} />
+          <Route index element={<ShowProfile />} />
+          <Route path="addItem" element={<AddItem />} />
           <Route path="editProfile" element={<MyProfile />} />
           <Route path="myBooking" element={<MyBookings />} />
           <Route path="manageItem" element={<ManageItem />} />

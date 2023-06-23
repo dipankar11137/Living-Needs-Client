@@ -22,6 +22,22 @@ const Dashboard = () => {
                   to="/dashboard"
                   className="font-bold  text-xl hover:text-orange-600"
                 >
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/dashboard/editProfile"
+                  className="font-bold  text-xl hover:text-orange-600"
+                >
+                  Edit Profile
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/dashboard/addItem"
+                  className="font-bold  text-xl hover:text-orange-600"
+                >
                   Add Item
                 </Link>
               </li>
