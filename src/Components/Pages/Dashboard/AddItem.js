@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import auth from '../../../firebase.init';
 
 const AddItem = () => {
-  const [user] = useAuthState(auth);
-  const email = user?.email;
+  // const [user] = useAuthState(auth);
+  // const email = user?.email;
   const [service, setService] = useState('');
   const imageHostKey = '39899c0cdbfbe66a2dbde3818a91832c';
 
@@ -29,7 +27,7 @@ const AddItem = () => {
       .then(res => res.json())
       .then(imageData => {
         const image = imageData.data.url;
-        const changeUrl = { ...data, service: service, img: image, email };
+        const changeUrl = { ...data, service: service, img: image };
         console.log(changeUrl);
 
         fetch(`http://localhost:5000/allServices`, {
@@ -104,6 +102,39 @@ const AddItem = () => {
                 </span>
               )}
             </label>
+            {/* email */}
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text text-xl font-semibold">Email</span>
+              </label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="input input-bordered bg-white lg:w-96 sm:w-full max-w-xs hover:shadow-xl shadow-inner border-blue-900"
+                {...register('email', {
+                  required: {
+                    value: true,
+                    message: 'Email is Required',
+                  },
+                  pattern: {
+                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                    message: 'Provide a valid Email',
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.email?.type === 'required' && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+                {errors.email?.type === 'pattern' && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+              </label>
+            </div>
             {/* image */}
             <label className="label">
               <span className="label-text text-xl font-semibold">

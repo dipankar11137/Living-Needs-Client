@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BiDownArrowCircle, BiUpArrowCircle } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 import AddReview from './Review/AddReview';
@@ -10,14 +10,15 @@ const Technician = ({ service }) => {
   const navigator = useNavigate();
   const [reviews, setReviews] = useState([]);
 
-  const handleArrow = email => {
-    // console.log(email);
-    setArrow(false);
-    const url = `http://localhost:5000/review/${email}`;
+  useEffect(() => {
+    const url = `http://localhost:5000/review/${service?.email}`;
     fetch(url)
       .then(res => res.json())
-      .then(data => setReviews(data));
-  };
+      .then(data => {
+        // setArrow(false);
+        setReviews(data);
+      });
+  }, [reviews, service?.email]);
 
   const handleBook = id => {
     navigator(`/bookService/${id}`);
@@ -69,7 +70,7 @@ const Technician = ({ service }) => {
             </button>
           </div>
           {arrow ? (
-            <button onClick={() => handleArrow(service?.email)}>
+            <button onClick={() => setArrow(false)}>
               <BiUpArrowCircle className="text-4xl font-bold mr-4 text-primary" />
             </button>
           ) : (

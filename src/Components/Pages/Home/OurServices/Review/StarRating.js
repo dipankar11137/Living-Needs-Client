@@ -5,7 +5,7 @@ const StarRating = ({ rating }) => {
 
   // Create an array of stars based on the rating value
   for (let i = 0; i < rating; i++) {
-    stars.push(<FaStar className="text-red-600 text-2xl " key={i} />);
+    stars.push(<FaStar className="text-amber-500 text-2xl " key={i} />);
   }
 
   return <div className="flex mt-2">{stars}</div>;
