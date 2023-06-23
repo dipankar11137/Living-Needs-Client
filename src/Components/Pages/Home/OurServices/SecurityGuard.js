@@ -5,13 +5,13 @@ import Technician from './Technician';
 const SecurityGuard = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/allServices/Cleaner')
+    fetch('http://localhost:5000/allServices/Security Guard')
       .then(res => res.json())
       .then(data => setServices(data));
   }, [services]);
   return (
     <div className="bg-slate-200">
-      <div className="mx-28 mb-10">
+      <div className="mx-28 mb-10 h-screen">
         <h1 className="py-4 font-bold text-4xl pl-4">Security Guard</h1>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-3">
           {services.map(service => (

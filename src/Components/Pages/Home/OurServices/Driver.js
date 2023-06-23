@@ -5,7 +5,7 @@ import Technician from './Technician';
 const Driver = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/allServices/Cleaner')
+    fetch('http://localhost:5000/allServices/Driver')
       .then(res => res.json())
       .then(data => setServices(data));
   }, [services]);
