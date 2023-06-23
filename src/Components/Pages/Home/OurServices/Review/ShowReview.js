@@ -3,7 +3,7 @@ import StarRating from './StarRating';
 
 const ShowReview = ({ review }) => {
   const rating = review?.rating;
-  // console.log(rating);
+
   return (
     <div className="p-3">
       <h1>{review?.review}</h1>

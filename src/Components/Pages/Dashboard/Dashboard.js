@@ -1,7 +1,10 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Dashboard = () => {
+  const [user] = useAuthState(auth);
   return (
     <div className="bg-slate-100">
       <div>
@@ -49,30 +52,35 @@ const Dashboard = () => {
                   My Booking
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/dashboard/manageItem"
-                  className="font-bold text-xl hover:text-orange-600"
-                >
-                  Manage Item
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/dashboard/addJobs"
-                  className="font-bold text-xl hover:text-orange-600"
-                >
-                  Job Post
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/dashboard/contact"
-                  className="font-bold text-xl hover:text-orange-600"
-                >
-                  Manage Contact
-                </Link>
-              </li>
+              {user?.email === 'abc@def.com' && (
+                <>
+                  {' '}
+                  <li>
+                    <Link
+                      to="/dashboard/manageItem"
+                      className="font-bold text-xl hover:text-orange-600"
+                    >
+                      Manage Item
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/dashboard/addJobs"
+                      className="font-bold text-xl hover:text-orange-600"
+                    >
+                      Job Post
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/dashboard/contact"
+                      className="font-bold text-xl hover:text-orange-600"
+                    >
+                      Manage Contact
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

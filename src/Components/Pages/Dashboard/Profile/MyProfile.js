@@ -106,21 +106,12 @@ const MyProfile = () => {
     <div className="w-full md:flex">
       <div className="indicator bg-white rounded  m-4 w-1/3 h-fit  mt-40">
         <div className="-mt-6 ">
-          {user?.image ? (
-            <img
-              style={{ margin: '-30px' }}
-              className=" w-56 h-56 indicator-item indicator-center rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 "
-              src={user?.image}
-              alt=""
-            />
-          ) : (
-            <img
-              style={{ margin: '-30px' }}
-              className=" w-56 h-56 indicator-item indicator-center rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 "
-              src="https://media.istockphoto.com/id/1393750072/vector/flat-white-icon-man-for-web-design-silhouette-flat-illustration-vector-illustration-stock.jpg?s=612x612&w=0&k=20&c=s9hO4SpyvrDIfELozPpiB_WtzQV9KhoMUP9R9gVohoU="
-              alt=""
-            />
-          )}
+          <img
+            style={{ margin: '-30px' }}
+            className=" w-56 h-56 indicator-item indicator-center rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 "
+            src={user?.image}
+            alt=""
+          />
         </div>
         <div className="mt-16 pl-4 w-full ">
           <div className="text-left py-8">
