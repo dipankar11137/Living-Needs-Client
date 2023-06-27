@@ -20,6 +20,7 @@ const Technician = ({ service }) => {
       });
   }, [reviews, service?.email]);
 
+
   const handleBook = id => {
     navigator(`/bookService/${id}`);
   };

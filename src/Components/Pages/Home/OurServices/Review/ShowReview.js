@@ -11,7 +11,11 @@ const ShowReview = ({ review }) => {
         <StarRating rating={rating} />
         <div className="mr-4 flex items-center font-bold">
           {review?.image ? (
-            <img className="h-8 mr-3 rounded-full" src={review?.image} alt="" />
+            <img
+              className="h-8 w-8 mr-3 rounded-full"
+              src={review?.image}
+              alt=""
+            />
           ) : (
             <img
               className="h-8 mr-3"

@@ -26,7 +26,7 @@ const ManageItem = () => {
         .then(data => {
           const remaining = services.filter(product => product._id !== id);
           setServices(remaining);
-          toast.success('Successfully Remove');
+          toast.success('Successfully Remove This');
         });
     }
   };
