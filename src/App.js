@@ -22,6 +22,7 @@ import 'aos/dist/aos.css';
 import Blog from './Components/Pages/Blogs/Blog';
 import BookServices from './Components/Pages/BookServices/BookServices';
 import AddJobs from './Components/Pages/Dashboard/AddJobs';
+import Histories from './Components/Pages/Dashboard/History/Histories';
 import ManageContacts from './Components/Pages/Dashboard/ManageContacts';
 import MyProfile from './Components/Pages/Dashboard/Profile/MyProfile';
 import ShowProfile from './Components/Pages/Dashboard/Profile/ShowProfile';
@@ -125,6 +126,7 @@ function App() {
           <Route path="myBooking" element={<MyBookings />} />
           <Route path="manageItem" element={<ManageItem />} />
           <Route path="addJobs" element={<AddJobs />} />
+          <Route path="history" element={<Histories />} />
           <Route path="contact" element={<ManageContacts />} />
         </Route>
         {/* Dashboard End */}

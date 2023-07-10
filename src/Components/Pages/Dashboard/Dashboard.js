@@ -73,6 +73,14 @@ const Dashboard = () => {
                   </li>
                   <li>
                     <Link
+                      to="/dashboard/history"
+                      className="font-bold text-xl hover:text-orange-600"
+                    >
+                      History
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       to="/dashboard/contact"
                       className="font-bold text-xl hover:text-orange-600"
                     >
