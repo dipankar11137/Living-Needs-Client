@@ -64,7 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <h1 className="pl-40 text-2xl font-bold">Living Needs</h1>
+          <h1 className="pl-40 text-2xl font-bold">Your Services</h1>
           {/* <a className="btn btn-ghost normal-case text-xl pl-20">
             <img className="w-14 rounded-2xl " src={logo} alt="" />
           </a> */}

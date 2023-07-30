@@ -12,8 +12,11 @@ const Text = () => {
     >
       <div class="container ">
         <div class="row">
-          <div class="w-[620px] bg-white pl-2 rounded-xl ml-[440px]">
-            <h3 class="animate-character font-extrabold "> LivingNeeds</h3>
+          <div class="w-[940px] bg-white pl-2 rounded-xl ml-[340px]">
+            <h3 class="animate-character font-extrabold ">
+              {' '}
+              Your_Services.com{' '}
+            </h3>
           </div>
         </div>
       </div>

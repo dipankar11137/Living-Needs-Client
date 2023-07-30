@@ -120,29 +120,6 @@ const Blogs = ({ job }) => {
         <div>
           <CardActions disableSpacing>
             <div className="flex justify-end w-full">
-              {/* <button
-                onClick={() => handleLoveCount()}
-                className="text-red-600 "
-              >
-                <FavoriteIcon />
-              </button> */}
-              {/* Comment */}
-              {/* <div>
-                <Button onClick={handleOpen}>
-                  <CommentIcon />
-                </Button>
-                <Modal
-                  keepMounted
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="keep-mounted-modal-title"
-                  aria-describedby="keep-mounted-modal-description"
-                >
-                  <Box className="rounded-xl" sx={style}>
-                    <h1>hello</h1>
-                  </Box>
-                </Modal>
-              </div> */}
               {/* shere */}
               <button>
                 <FacebookShareButton url={shareUrl}>

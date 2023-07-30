@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Share/Footer';
 import Blogs from './Blogs';
 
 const Blog = () => {
@@ -7,16 +8,19 @@ const Blog = () => {
     fetch('http://localhost:5000/jobs')
       .then(res => res.json())
       .then(data => setJobs(data));
-  }, []);
+  }, [jobs]);
 
   console.log(jobs);
   return (
-    <div className=" pb-[1000px]">
-      <div>
-        {jobs.map(job => (
-          <Blogs key={job._id} job={job}></Blogs>
-        ))}
+    <div>
+      <div className=" pb-[400px]">
+        <div>
+          {jobs.map(job => (
+            <Blogs key={job._id} job={job}></Blogs>
+          ))}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
