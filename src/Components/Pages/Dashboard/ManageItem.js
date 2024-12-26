@@ -13,7 +13,7 @@ const ManageItem = () => {
       .then(data => setServices(data));
   }, [services]);
   const handleAdd = () => {
-    navigator('/dashboard');
+    navigator('/dashboard/addItem');
   };
   const handleDelete = id => {
     const proceed = window.confirm('Are You Sure ?');

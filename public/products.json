@@ -5,12 +5,7 @@
     "link": "computers",
     "img": "https://img.freepik.com/premium-vector/computer-technician-profession-mascot-logo-vector-cartoon-style_180868-1139.jpg?w=2000"
   },
-  {
-    "_id": 2,
-    "name": "Mechanical",
-    "link": "mechanical",
-    "img": "https://thumbs.dreamstime.com/b/mechanic-man-logo-holding-huge-wrench-mechanic-man-logo-holding-huge-wrench-service-repair-maintenance-mascot-concept-160467303.jpg"
-  },
+
   {
     "_id": 3,
     "name": "Electrician",
@@ -23,24 +18,14 @@
     "link": "cleaner",
     "img": "https://img.freepik.com/free-vector/cleaning-logo-business-composition_1284-35644.jpg?w=2000"
   },
-  {
-    "_id": 5,
-    "name": "Ambulance Service",
-    "link": "ambulance",
-    "img": "https://www.freepnglogos.com/uploads/ambulance-png/ambulance-interests-the-school-counselor-kind-8.png"
-  },
+
   {
     "_id": 6,
     "name": "Vehicle Service",
     "link": "vehicles",
     "img": "https://vehicledetail.info/CarSource/hero-imag.png"
   },
-  {
-    "_id": 7,
-    "name": "Driver",
-    "link": "driver",
-    "img": "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/26854/boy-driving-car-cartoon-clipart-xl.png"
-  },
+
   {
     "_id": 8,
     "name": "Security Guard",
@@ -52,6 +37,12 @@
     "name": "Baburchi ",
     "link": "baburchi",
     "img": "https://png.pngtree.com/element_our/png/20180918/chef-cooking-fried-chicken-and-delicious-sign-png_103460.jpg"
+  },
+  {
+    "_id": 7,
+    "name": "Driver",
+    "link": "driver",
+    "img": "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/26854/boy-driving-car-cartoon-clipart-xl.png"
   },
   {
     "_id": 10,

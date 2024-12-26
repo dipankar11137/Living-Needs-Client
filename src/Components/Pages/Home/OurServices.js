@@ -28,13 +28,13 @@ const OurServices = () => {
       <div className=" pl-5 rounded-lg ">
         <Carousel className="rounded-lg pl-3" responsive={responsive}>
           <Link to="/">
-            <div className="card w-56 bg-base-100 text-black  mt-2 mb-3  shadow-2xl  hover:shadow-lg">
+            <div className="card w-48 bg-base-100 text-black  mt-2 mb-3  shadow-2xl  hover:shadow-lg">
               <figure>
                 <img
                   className="w-full  pic-style"
                   src="https://thumbs.dreamstime.com/b/ac-repair-service-rgb-color-icon-ac-repair-service-rgb-color-icon-air-conditioning-systems-professional-maintenance-technical-188783189.jpg"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">
@@ -45,13 +45,13 @@ const OurServices = () => {
             </div>
           </Link>
           <Link to="/">
-            <div className="card w-56 bg-base-100 text-black mt-2 shadow-2xl  hover:shadow-lg">
+            <div className="card w-48 bg-base-100 text-black mt-2 shadow-2xl  hover:shadow-lg">
               <figure>
                 <img
                   className="w-full pic-style"
                   src="https://i.ibb.co/4TYjG1N/appient-removebg-preview-1.png"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">
@@ -62,13 +62,13 @@ const OurServices = () => {
             </div>
           </Link>
           <Link to="/">
-            <div className="card w-56 bg-base-100 text-black  mt-2  shadow-2xl  hover:shadow-lg">
+            <div className="card w-48 bg-base-100 text-black  mt-2  shadow-2xl  hover:shadow-lg">
               <figure>
                 <img
                   className="w-full  pic-style"
                   src="https://cdn-icons-png.flaticon.com/512/6159/6159584.png"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">
@@ -79,13 +79,13 @@ const OurServices = () => {
             </div>
           </Link>
           <Link to="/">
-            <div className="card w-56 bg-base-100 text-black mt-2 shadow-2xl  hover:shadow-lg">
+            <div className="card w-48 bg-base-100 text-black mt-2 shadow-2xl  hover:shadow-lg">
               <figure>
                 <img
                   className="w-full pic-style"
                   src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/icons_png/1583681093_tiwnn_52x52.webp"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">
@@ -94,13 +94,13 @@ const OurServices = () => {
             </div>
           </Link>
           <Link to="/">
-            <div className="card w-56 bg-base-100 text-black mt-2 shadow-2xl  hover:shadow-lg">
+            <div className="card w-48 bg-base-100 text-black mt-2 shadow-2xl  hover:shadow-lg">
               <figure>
                 <img
                   className="w-full  pic-style"
                   src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/v4_uploads/category_icons/224/default_52x52.webp"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">
@@ -109,13 +109,13 @@ const OurServices = () => {
             </div>
           </Link>
           <Link to="/">
-            <div className="card w-56 bg-base-100 text-black mt-2  shadow-2xl  hover:shadow-lg">
+            <div className="card w-48 bg-base-100 text-black mt-2  shadow-2xl  hover:shadow-lg">
               <figure>
                 <img
                   className="w-full  pic-style"
                   src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/icons_png/1599673571_tiwnn_52x52.webp"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">
@@ -132,7 +132,7 @@ const OurServices = () => {
                   className="w-full pic-style"
                   src="https://cdn-marketplacexyz.s3.ap-south-1.amazonaws.com/sheba_xyz/images/svg/all-services.svg"
                   alt="ac"
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: '80px', width: '80px' }}
                 />
               </figure>
               <div className="pb-2 px-2">

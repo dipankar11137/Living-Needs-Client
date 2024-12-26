@@ -33,42 +33,43 @@ const Technician = ({ service }) => {
             className="w-full pic-style"
             src={service?.img}
             alt=""
-            style={{ height: '300px' }}
+            style={{ height: '210px' }}
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body p-2">
           <h2 className="card-title font-bold text-2xl">{service?.name}</h2>
           <p>{service?.location}</p>
-          <h2 className="mt-2">
+          <h2 className="mt-1">
             Salary : <span className="font-bold">{service?.price} BDT</span> /
             Per Day
           </h2>
           <p>{service.description}</p>
           <p>Phone Number : {service?.number}</p>
         </div>
-        <div className="mb-2 p-2 flex justify-between">
+
+        <div className="mb-1 p-2 flex justify-between items-center">
           <div>
             {review ? (
               <button
                 onClick={() => setReview(false)}
-                className="btn font-bold btn-secondary text-white"
+                className="btn font-bold btn-xs btn-secondary text-white"
               >
                 minimize Review{' '}
               </button>
             ) : (
               <button
                 onClick={() => setReview(true)}
-                className="btn font-bold btn-primary text-white"
+                className="btn font-bold btn-primary btn-xs text-white"
               >
                 Add Review{' '}
               </button>
             )}
-            <button
+            {/* <button
               onClick={() => handleBook(service._id)}
-              className="btn font-bold ml-20 text-white"
+              className="btn font-bold btn-xs ml-20 text-white"
             >
               book now{' '}
-            </button>
+            </button> */}
           </div>
           {arrow ? (
             <button onClick={() => setArrow(false)}>
@@ -101,6 +102,14 @@ const Technician = ({ service }) => {
           ) : (
             <></>
           )}
+        </div>
+        <div>
+          <button
+            onClick={() => handleBook(service._id)}
+            className="btn font-bold btn-sm  text-white w-full"
+          >
+            book now{' '}
+          </button>
         </div>
       </div>
 

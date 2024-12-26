@@ -12,10 +12,10 @@ const Text = () => {
     >
       <div class="container ">
         <div class="row">
-          <div class="w-[940px] bg-white pl-2 rounded-xl ml-[340px]">
-            <h3 class="animate-character font-extrabold ">
+          <div class="w-[940px] bg-white pl-2  rounded-xl ml-[180px] ">
+            <h3 class="animate-character font-bold my-0 ml-5">
               {' '}
-              Your_Services.com{' '}
+              Daily_Living_Needs.com
             </h3>
           </div>
         </div>

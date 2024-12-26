@@ -105,12 +105,12 @@ const Blogs = ({ job }) => {
           <div>
             <h1 className="text-2xl font-bold text-blue-700">{job?.jobName}</h1>
 
-            <h2 className="text-xl pb-2 font-semibold">{job?.companyName}</h2>
-            <h2 className="text-xl ">
+            <h2 className=" pb-2 font-semibold">{job?.companyName}</h2>
+            <h2 className=" ">
               <LocationOnIcon className="mr-3" />
               {job?.location}
             </h2>
-            <h2 className="text-xl">
+            <h2 className="">
               <ManageAccountsIcon className="mr-3" />
               {job?.experience} Years
             </h2>
@@ -144,31 +144,31 @@ const Blogs = ({ job }) => {
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph>
-                <span className="font-semibold text-2xl">Vacancy :</span>
+                <span className="font-semibold text-xl">Vacancy :</span>
               </Typography>
               <Typography paragraph>
                 <span className="font-bold text-xl"> {job?.vacancy}</span>
               </Typography>
               <Typography paragraph>
-                <span className="font-semibold text-2xl">
+                <span className="font-semibold text-xl">
                   Job Responsibilities :
                 </span>
               </Typography>
               <Typography paragraph>{job?.jobResponsibilities}</Typography>
               <Typography paragraph>
-                <span className="font-semibold text-2xl">
+                <span className="font-semibold text-xl">
                   Employment Status :
                 </span>
               </Typography>
               <Typography paragraph>{job?.employeeStatus}</Typography>
               <Typography paragraph>
-                <span className="font-semibold text-2xl">
+                <span className="font-semibold text-xl">
                   Educational Requirements :
                 </span>
               </Typography>
               <Typography paragraph>{job?.educationalRequirements}</Typography>
               <Typography paragraph>
-                <span className="font-semibold text-2xl">
+                <span className="font-semibold text-xl">
                   Additional Requirements :
                 </span>
               </Typography>

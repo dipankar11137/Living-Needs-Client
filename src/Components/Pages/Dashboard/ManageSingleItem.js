@@ -4,7 +4,7 @@ const ManageSingleItem = ({ service, handleAdd, handleDelete }) => {
   return (
     <tr className="text-center">
       <td>
-        <img className="w-36 rounded-lg" src={service?.img} alt="" />
+        <img className="w-24 h-20 rounded-lg" src={service?.img} alt="" />
       </td>
       <td>{service?.name}</td>
       <td>{service?.service}</td>

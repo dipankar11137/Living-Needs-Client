@@ -24,7 +24,7 @@ const Dashboard = () => {
               <li>
                 <Link
                   to="/dashboard"
-                  className="font-bold  text-xl hover:text-orange-600"
+                  className="font-semibold mt-1  text-xl hover:text-orange-600"
                 >
                   Profile
                 </Link>
@@ -32,7 +32,7 @@ const Dashboard = () => {
               <li>
                 <Link
                   to="/dashboard/editProfile"
-                  className="font-bold  text-xl hover:text-orange-600"
+                  className="font-semibold mt-1  text-xl hover:text-orange-600"
                 >
                   Edit Profile
                 </Link>
@@ -40,34 +40,34 @@ const Dashboard = () => {
               <li>
                 <Link
                   to="/dashboard/addItem"
-                  className="font-bold  text-xl hover:text-orange-600"
+                  className="font-semibold mt-1  text-xl hover:text-orange-600"
                 >
-                  Add Item
+                  Add Service
                 </Link>
               </li>
               <li>
                 <Link
                   to="/dashboard/myBooking"
-                  className="font-bold  text-xl hover:text-orange-600"
+                  className="font-semibold mt-1  text-xl hover:text-orange-600"
                 >
                   My Booking
                 </Link>
               </li>
-              {user?.email === 'abc@def.com' && (
+              {user?.email === 'limon51-041@diu.edu.bd' && (
                 <>
                   {' '}
                   <li>
                     <Link
                       to="/dashboard/manageItem"
-                      className="font-bold text-xl hover:text-orange-600"
+                      className="font-semibold mt-1 text-xl hover:text-orange-600"
                     >
-                      Manage Item
+                      Manage Service
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/dashboard/addJobs"
-                      className="font-bold text-xl hover:text-orange-600"
+                      className="font-semibold mt-1 text-xl hover:text-orange-600"
                     >
                       Job Post
                     </Link>
@@ -75,7 +75,7 @@ const Dashboard = () => {
                   <li>
                     <Link
                       to="/dashboard/history"
-                      className="font-bold text-xl hover:text-orange-600"
+                      className="font-semibold mt-1 text-xl hover:text-orange-600"
                     >
                       History
                     </Link>
@@ -83,7 +83,7 @@ const Dashboard = () => {
                   <li>
                     <Link
                       to="/dashboard/contact"
-                      className="font-bold text-xl hover:text-orange-600"
+                      className="font-semibold mt-1 text-xl hover:text-orange-600"
                     >
                       Manage Contact
                     </Link>

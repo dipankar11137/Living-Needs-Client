@@ -39,12 +39,12 @@ const MyBookings = () => {
   return (
     <div className=" pb-20 mx-10 h-screen">
       <div className="overflow-x-auto">
-        <table className="table table-zebra w-full rounded-xl">
+        <table className="table table-zebra w-full rounded-xl ">
           {/* head */}
           <thead>
             <tr className="text-center ">
               <th></th>
-              <th className="text-xl">Name of service provider</th>
+              <th className="text-xl">Service provider</th>
               <th className="text-xl">Customer Name</th>
               <th className="text-xl">category</th>
               <th className="text-xl">Salary</th>

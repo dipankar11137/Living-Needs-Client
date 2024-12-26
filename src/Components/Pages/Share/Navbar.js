@@ -16,21 +16,21 @@ const Navbar = () => {
 
   const manuItem = (
     <>
-      <li className="font-bold">
+      <li className="">
         <Link to="/about">About</Link>
       </li>
-      <li className="font-bold">
+      <li className="">
         <Link to="/blogs">Needs Job</Link>
       </li>
       {user && (
-        <li className="font-bold">
+        <li className="">
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
-      {/* <li className="font-bold">
+      {/* <li className="">
         <Link to="/myBooking">My Booking</Link>
       </li> */}
-      <li className="font-bold">
+      <li className="">
         <Link to="/contact">Contact</Link>
       </li>
     </>
@@ -64,10 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <h1 className="pl-40 text-2xl font-bold">Your Services</h1>
-          {/* <a className="btn btn-ghost normal-case text-xl pl-20">
-            <img className="w-14 rounded-2xl " src={logo} alt="" />
-          </a> */}
+          <h1 className="pl-40 text-2xl font-bold">Daily Living Needs</h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -80,9 +77,9 @@ const Navbar = () => {
         </div>
 
         <ul>
-          <li className=" font-bold pr-20">
+          <li className="  pr-20">
             {user ? (
-              <button className=" font-bold" onClick={logout}>
+              <button className=" " onClick={logout}>
                 Sign Out
               </button>
             ) : (

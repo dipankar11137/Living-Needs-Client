@@ -10,10 +10,10 @@ const Service = ({ service }) => {
             className="w-full pic-style"
             src={service?.img}
             alt=""
-            style={{ height: '200px', width: '200px' }}
+            style={{ height: '160px', width: '170px' }}
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body -mt-4">
           <h2 className="card-title font-bold">{service?.name}</h2>
         </div>
       </div>
